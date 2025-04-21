@@ -1,4 +1,495 @@
 body {
-  background: pink;
-  color: hotpink;
+  background: #ffffff;
+  color: #333;
+  font-family: 'Hind', sans-serif;
+  /* Brödtexten */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  /* Gör rubrikerna tydliga */
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-image {
+  width: 120px;
+  /* Justera efter önskad storlek */
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  /* Valfri ram */
+}
+
+.projects-section {
+  background-color: white;
+  /* Sätter sektionens bakgrund till vit */
+  width: 1044px;
+  /* Matchar projektkortens bredd */
+  margin: auto;
+  /* Centrera sektionen */
+}
+
+.projects-section h2 {
+  text-align: left;
+  color: #0B24F5;
+  font-size: 80px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+  /* Rätt avstånd mellan projekten */
+  width: 1044px;
+  margin: auto;
+}
+
+
+.project-card {
+  display: flex;
+  align-items: center;
+  /* Ser till att elementen ligger i samma höjd */
+  gap: 16px;
+}
+
+
+
+
+.project-image {
+  width: 100%;
+  /* Gör bilden responsiv */
+  height: auto;
+  /* Behåll proportionerna */
+  max-width: 408px;
+  border-left: 20px solid #0B24F5;
+  border-bottom: 20px solid #0B24F5;
+}
+
+
+.project-content h3 {
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+  color: black;
+  text-align: left;
+  /* Ser till att titeln är vänsterställd */
+}
+
+.project-content p {
+  font-size: 18px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  /* Säkerställ att beskrivningen är vänsterjusterad */
+}
+
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* ❌ Ändra från center till vänster */
+  text-align: left;
+  /* Se till att all text är vänsterjusterad */
+}
+
+
+.project-content a {
+  margin-top: 32px;
+  display: inline-block;
+  text-align: left;
+  /* Se till att knappens text också ligger till vänster */
+}
+
+.project-links {
+  display: flex;
+  justify-content: flex-start;
+  /* ❌ Ändra från center till vänster */
+  gap: 32px;
+  /* Se till att det matchar spacing i Figma */
+  margin-top: auto;
+  /* Ser till att knapparna alltid hamnar längst ned */
+}
+
+
+
+
+.tech-stack {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+.tech-section {
+  width: 100%;
+  height: 100vh;
+  /* Gör så att sektionen fyller hela viewport-höjden */
+  position: relative;
+  /* Viktigt för att kunna använda `absolute` positionering */
+  background-color: #0B24F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.tech-container {
+  width: 1044px;
+  position: absolute;
+  left: 234px;
+  top: 388px;
+  display: flex;
+  justify-content: flex-start;
+  /* Gör så att titeln ligger till vänster */
+  align-items: center;
+  /* Justera vertikalt */
+  gap: 124px;
+  /* Exakt avstånd från Figma */
+}
+
+
+
+.tech-title {
+  font-size: 80px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.tech-text {
+  flex: 1;
+  font-size: 32px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
+  color: white;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Tre kolumner */
+  gap: 20px;
+  font-size: 24px;
+}
+
+
+.code-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 18px;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+section {
+  background-color: #0B24F5;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+section {
+  background-color: #0B24F5;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.contact-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.arrow {
+  display: block;
+  font-size: 2rem;
+  color: #007bff;
+  margin-top: 20px;
+}
+
+.beyond {
+  text-align: left;
+  /* Se till att sektionen INTE centrerar allt */
+  padding: 60px 234px;
+  background-color: #FFECEA;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* ❌ Ändra från center till vänster */
+}
+
+.beyond-title-container {
+  width: 1044px;
+  /* Ge titeln en tillräckligt stor container */
+}
+
+h2.pink-title {
+  font-size: 80px;
+  color: #FF4575;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: left !important;
+  word-wrap: break-word;
+  margin-bottom: 40px;
+}
+
+
+
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Två kort per rad */
+  gap: 30px;
+  width: 80%;
+  max-width: 1200px;
+  background-color: #FFECEA;
+  /* Samma färg som sektionen */
+  padding: 20px;
+  border-radius: 12px;
+  justify-content: left;
+}
+
+.beyond-card {
+  background-color: #FFECEA;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  /* Se till att hela kortet får vänsterjusterad text */
+}
+
+
+@media (max-width: 768px) {
+  .beyond-grid {
+    grid-template-columns: 1fr;
+    /* En kolumn på mindre skärmar */
+  }
+}
+
+
+.beyond-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.beyond-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  /* Se till att texten har en synlig färg */
+  margin-bottom: 10px;
+}
+
+
+.beyond-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* ❌ Se till att det INTE är center */
+  padding: 15px;
+  gap: 10px;
+}
+
+
+
+.beyond-content h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.beyond-content p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  color: #555;
+  text-align: left;
+  /* ❌ Byt ut från center till left */
+}
+
+
+.beyond-content a {
+  color: #ff4081;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.beyond-content a:hover {
+  text-decoration: underline;
+}
+
+
+.squiggly-container {
+  background-color: #fce4ec;
+  /* Samma färg som Thoughts och Beyond */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  /* Full bredd */
+}
+
+.squiggly-line {
+  width: 100vw;
+  /* Gör linjen lika bred som hela viewporten */
+  height: auto;
+  object-fit: cover;
+  /* Se till att linjen anpassas */
+}
+
+
+.thoughts {
+  background-color: #FFECEA;
+  /* Rosa bakgrund enligt Figma */
+  width: 100vw;
+  padding: 80px 234px;
+  /* Justera efter layout */
+  text-align: left;
+  /* Se till att allt är vänsterjusterat */
+}
+
+
+
+.thoughts-image {
+  width: 1044px;
+  /* Exakt storlek enligt Figma */
+  height: 340px;
+  background-color: #D9D9D9;
+  /* Färg från Figma */
+  border-left: 20px solid #FF4575;
+  border-bottom: 20px solid #FF4575;
+  display: block;
+  margin-bottom: 40px;
+}
+
+
+.subheader {
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 16px;
+}
+
+.thoughts p {
+  font-size: 20px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  color: black;
+  line-height: 1.6;
+  max-width: 1044px;
+}
+
+.thoughts-description {
+  font-size: 20px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  color: black;
+  line-height: 1.6;
+  max-width: 1044px;
+  text-align: left;
+  /* Se till att den är vänsterjusterad */
+  margin-left: 0;
+  /* Nollställ eventuell offset */
+}
+
+
+.ticker-container {
+  width: 100vw;
+  /* Gör banderollen lika bred som hela skärmen */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff4081;
+  /* Matcha din design */
+  padding: 10px 0;
+}
+
+
+.ticker-svg {
+  width: 80%;
+  /* Minska storleken */
+  height: auto;
+  max-height: 50px;
+  /* Anpassa höjden */
 }
