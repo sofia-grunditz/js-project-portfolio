@@ -1,4 +1,4 @@
-import Header from "./components/Header.jsx";
+import Header from "./components/Header";
 import Tech from "./components/Tech.jsx";
 import Projects from "./components/Projects.jsx";
 import Thoughts from "./components/Thoughts.jsx";

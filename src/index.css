@@ -2,6 +2,7 @@ body {
   background: #ffffff;
   color: #333;
   font-family: 'Hind', sans-serif;
+  box-sizing: border-box;
   /* Brödtexten */
 }
 
@@ -149,7 +150,7 @@ h6 {
 
 .tech-section {
   width: 100%;
-  height: 100vh;
+  min-height: 600px;
   /* Gör så att sektionen fyller hela viewport-höjden */
   position: relative;
   /* Viktigt för att kunna använda `absolute` positionering */
@@ -162,7 +163,6 @@ h6 {
 
 .tech-container {
   width: 1044px;
-  position: absolute;
   left: 234px;
   top: 388px;
   display: flex;
@@ -248,10 +248,7 @@ p {
   font-size: 1.2rem;
 }
 
-header {
-  text-align: center;
-  padding: 50px 20px;
-}
+
 
 h1 {
   font-size: 2rem;
