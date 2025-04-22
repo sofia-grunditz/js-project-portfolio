@@ -5,6 +5,7 @@ import Thoughts from "./components/Thoughts.jsx";
 import Beyond from './components/Beyond.jsx';
 import Skills from "./components/Skills.jsx";
 import Contact from './components/Contact.jsx';
+import TickerTape from "./components/TickerTape.jsx"; // Lägg till denna rad
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Beyond />
       <Skills />
       <Contact />
+      <TickerTape />
     </>
   );
 }

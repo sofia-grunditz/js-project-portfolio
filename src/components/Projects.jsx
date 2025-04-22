@@ -34,42 +34,126 @@ const projectData = [
     netlify: "https://accessibilitysofiag.netlify.app/",
   }
 ];
+import styled from 'styled-components';
 
-const ProjectCard = ({ title, description, technologies, image, netlify, github }) => {
-  return (
-    <div className="project-card">
-      <img src={image} alt={`Image for ${title}`} className="project-image" />
-      <div className="project-content">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <p className="tech-stack">{technologies.join(" • ")}</p>
+const ProjectsSection = styled.section`
+  width: 100%;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+`;
 
-        <div className="project-links"> {/* Flex-container för knapparna */}
-          <a href={netlify} target="_blank" rel="noopener noreferrer">
-            <img src="/buttondemo.svg" alt="View Live Demo" className="project-button" />
-          </a>
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            <img src="/buttongit.svg" alt="View the Code" className="project-button" />
-          </a>
-        </div>
-      </div>
-    </div>
+const Title = styled.h2`
+  color: #0B24F5;
+  font-size: 80px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+`;
 
-  );
-};
+const ProjectsContainer = styled.div`
+  width: 1044px;
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+`;
 
+const ProjectCard = styled.div`
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+`;
 
+const ProjectImage = styled.img`
+  width: 408px;
+  height: 280px;
+  border-left: 20px solid #0B24F5;
+  border-bottom: 20px solid #0B24F5;
+`;
+
+const ProjectContent = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const ProjectTitle = styled.h3`
+  font-size: 32px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  color: black;
+`;
+
+const ProjectDescription = styled.p`
+  font-size: 18px;
+  font-family: 'Hind';
+  font-weight: 400;
+  color: black;
+`;
+
+const TechStack = styled.div`
+  display: flex;
+  gap: 4px;
+`;
+
+const Tech = styled.div`
+  padding: 2px 6px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 32px;
+`;
+
+const ActionButton = styled.a`
+  display: flex;
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 40px;
+  padding: 0.5rem 1rem;
+  color: #333;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  text-decoration: none;
+`;
 
 const Projects = () => {
   return (
-    <section className="projects-section">
-      <h2>Featured Projects</h2>
-      <div className="projects-container">
+    <ProjectsSection>
+      <Title>Featured Projects</Title>
+      <ProjectsContainer>
         {projectData.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index}>
+            <ProjectImage src={project.image} alt={project.title} />
+            <ProjectContent>
+              <div>
+                <ProjectTitle>{project.title}</ProjectTitle>
+                <ProjectDescription>{project.description}</ProjectDescription>
+                <TechStack>
+                  {project.technologies.map((tech, i) => (
+                    <Tech key={i}>{tech}</Tech>
+                  ))}
+                </TechStack>
+              </div>
+              <ButtonContainer>
+                <ActionButton href={project.netlify} target="_blank">Live Demo</ActionButton>
+                <ActionButton href={project.github} target="_blank">View the Code</ActionButton>
+              </ButtonContainer>
+            </ProjectContent>
+          </ProjectCard>
         ))}
-      </div>
-    </section>
+      </ProjectsContainer>
+    </ProjectsSection>
   );
 };
 

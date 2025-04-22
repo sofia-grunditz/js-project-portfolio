@@ -295,16 +295,6 @@ p {
   /* Ge titeln en tillräckligt stor container */
 }
 
-h2.pink-title {
-  font-size: 80px;
-  color: #FF4575;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  text-align: left !important;
-  word-wrap: break-word;
-  margin-bottom: 40px;
-}
-
 
 
 .beyond-grid {
@@ -411,62 +401,6 @@ h2.pink-title {
   height: auto;
   object-fit: cover;
   /* Se till att linjen anpassas */
-}
-
-
-.thoughts {
-  background-color: #FFECEA;
-  /* Rosa bakgrund enligt Figma */
-  width: 100vw;
-  padding: 80px 234px;
-  /* Justera efter layout */
-  text-align: left;
-  /* Se till att allt är vänsterjusterat */
-}
-
-
-
-.thoughts-image {
-  width: 1044px;
-  /* Exakt storlek enligt Figma */
-  height: 340px;
-  background-color: #D9D9D9;
-  /* Färg från Figma */
-  border-left: 20px solid #FF4575;
-  border-bottom: 20px solid #FF4575;
-  display: block;
-  margin-bottom: 40px;
-}
-
-
-.subheader {
-  font-size: 32px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: black;
-  margin-bottom: 16px;
-}
-
-.thoughts p {
-  font-size: 20px;
-  font-family: 'Hind', sans-serif;
-  font-weight: 400;
-  color: black;
-  line-height: 1.6;
-  max-width: 1044px;
-}
-
-.thoughts-description {
-  font-size: 20px;
-  font-family: 'Hind', sans-serif;
-  font-weight: 400;
-  color: black;
-  line-height: 1.6;
-  max-width: 1044px;
-  text-align: left;
-  /* Se till att den är vänsterjusterad */
-  margin-left: 0;
-  /* Nollställ eventuell offset */
 }
 
 

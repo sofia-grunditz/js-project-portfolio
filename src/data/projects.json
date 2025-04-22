@@ -1,45 +1,28 @@
-const projectData = [
-  {
-    title: "Recipe Library",
-    description: "A dynamic recipe library using the Spoonacular API.",
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "Node"
-    ],
-    image: "/images/recipe-library.png", // Lägg till en bild
-    link: "https://github.com/your-repo/recipe-library",
-  },
-  {
-    title: "Weather App",
-    description: "A TypeScript-based weather app fetching real-time data.",
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "Node"
-    ],
-    image: "/images/weather-app.png",
-    link: "https://github.com/your-repo/weather-app",
-  },
-  {
-    title: "Spearhead Merchandise Shop",
-    description: "A responsive e-commerce shop with product grid and hero section.",
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "Node"
-    ],
-    image: "/images/merch-shop.png",
-    link: "https://github.com/your-repo/merch-shop",
-  },
-  {
-    title: "Web Accessibility Project",
-    description: "An accessible multiple-choice quiz using semantic HTML.",
-    technologies: [
-      "HTML5",
-      "CSS3"
-    ],
-    image: "/images/accessibility-quiz.png",
-    link: "https://github.com/your-repo/accessibility-quiz",
-  },
-];
+{
+  "projects": [
+    {
+      "title": "Recipe Library",
+      "description": "A dynamic recipe library using the Spoonacular API.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Node"
+      ],
+      "image": "/images/recipe-library.png",
+      "netlify": "https://your-live-link.com",
+      "github": "https://github.com/your-repo/recipe-library"
+    },
+    {
+      "title": "Weather App",
+      "description": "A TypeScript-based weather app fetching real-time data.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Node"
+      ],
+      "image": "/images/weather-app.png",
+      "netlify": "https://your-live-link.com",
+      "github": "https://github.com/your-repo/weather-app"
+    }
+  ]
+}
