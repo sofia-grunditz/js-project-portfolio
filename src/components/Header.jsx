@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from './theme';
 
 const HeaderContainer = styled.div`
   width: 100%;
@@ -9,23 +10,22 @@ const HeaderContainer = styled.div`
   background: white;
   position: relative;
 
-  @media (max-width: 1281px) { /* Desktop */
+  @media ${device.desktop} {
     min-height: 650px;
   }
 
-  @media (max-width: 745px) { /* Tablet */
+  @media ${device.tablet} {
     min-height: 500px;
     justify-content: flex-start;
     padding: 40px 16px;
   }
 
-  @media (max-width: 376px) { /* Mobil */
+  @media ${device.mobile} {
     min-height: 400px;
     justify-content: center;
     padding: 30px 12px;
   }
 `;
-
 
 const HeaderContent = styled.div`
   width: 1044px;
@@ -34,11 +34,11 @@ const HeaderContent = styled.div`
   align-items: flex-start;
   gap: 16px;
 
-  @media (max-width: 1281px) { /* Desktop */
+  @media ${device.desktop} {
     width: 958px;
   }
 
-  @media (max-width: 745px) { /* Tablet */
+  @media ${device.tablet} {
     width: 680px;
     align-items: flex-start;
     gap: 32px;
@@ -46,7 +46,7 @@ const HeaderContent = styled.div`
     top: 128px;
   }
 
-  @media (max-width: 376px) { /* Mobil */
+  @media ${device.mobile} {
     width: 343px;
     align-items: center;
     gap: 32px;
@@ -61,7 +61,7 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  @media (max-width: 745px) {
+  @media ${device.tablet} {
     align-items: center;
   }
 `;
@@ -72,11 +72,12 @@ const Title = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: black;
-  @media (max-width: 1281px) {
+
+  @media ${device.desktop} {
     font-size: 24px;
   }
 
-  @media (max-width: 745px) {
+  @media ${device.tablet} {
     font-size: 18px;
   }
 `;
@@ -87,11 +88,12 @@ const Subtitle = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #0B24F5;
-  @media (max-width: 1281px) {
+
+  @media ${device.desktop} {
     font-size: 56px;
   }
 
-  @media (max-width: 745px) {
+  @media ${device.tablet} {
     font-size: 32px;
   }
 `;
@@ -101,28 +103,31 @@ const ProfileSection = styled.div`
   display: flex;
   align-items: center;
   gap: 22px;
-  @media (max-width: 1281px) {
+
+  @media ${device.desktop} {
     max-width: 680px;
     flex-direction: column;
     align-items: center;
   }
 
-  @media (max-width: 745px) {
+  @media ${device.tablet} {
     max-width: 343px;
     flex-direction: column;
     gap: 16px;
   }
 `;
+
 const ProfileImage = styled.img`
   width: 164px;
   height: 164px;
   border-radius: 9999px;
-  @media (max-width: 1281px) {
+
+  @media ${device.desktop} {
     width: 140px;
     height: 140px;
   }
 
-  @media (max-width: 745px) {
+  @media ${device.tablet} {
     width: 120px;
     height: 120px;
   }
@@ -134,17 +139,19 @@ const BioText = styled.div`
   font-family: 'Hind', sans-serif;
   font-weight: 400;
   color: black;
-  @media (max-width: 1281px) {
+
+  @media ${device.desktop} {
     font-size: 16px;
     text-align: left;
   }
 
-  @media (max-width: 745px) {
+  @media ${device.tablet} {
     font-size: 14px;
     text-align: left;
     justify-content: left;
   }
 `;
+
 const ArrowContainer = styled.div`
   width: 27px;
   height: 68px;
@@ -152,11 +159,12 @@ const ArrowContainer = styled.div`
   bottom: -40px; 
   left: 50%;
   transform: translateX(-50%);
-  @media (max-width: 1281px) {
+
+  @media ${device.desktop} {
     bottom: -30px;
   }
 
-  @media (max-width: 745px) {
+  @media ${device.tablet} {
     bottom: -20px;
   }
 `;

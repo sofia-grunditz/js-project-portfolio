@@ -10,6 +10,7 @@ const TickerContainer = styled.div`
   position: relative;
   bottom: 0;
   left: 0;
+  object-fit: obtain;
 `;
 
 const TickerText = styled.div`

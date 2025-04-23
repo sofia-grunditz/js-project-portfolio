@@ -1,105 +1,242 @@
-const projectData = [
-  {
-    title: "Recipe Library",
-    description: "In this project, I built a dynamic recipe library by integrating the Spoonacular API. Instead of using static mock data, I fetched real-time recipe data using the fetch() function in JavaScript and displayed it dynamically on the site. I also adapted the filtering and sorting features to match the API's response format.",
-    technologies: ["HTML5", "CSS3", "Node"],
-    image: "/images/imagerecipe.png",
-    netlify: "https://recipeproject-sofia.netlify.app/", /* Netlify-länk */
-    github: "https://github.com/sofia-grunditz/js-project-recipe-library",
-  },
-  {
-    title: "Weather App",
-    description: "In this group project, we created a responsive weather app using TypeScript and the OpenWeatherMap API. The app displays current weather conditions, temperature, sunrise and sunset times, and a 4-day forecast for a selected city. We worked collaboratively to follow a chosen design mockup, ensuring the layout and styling matched. ",
-    technologies: ["HTML5", "CSS3", "Node"],
-    image: "/images/imageweather.png",
-    netlify: "https://watherrr.netlify.app/",
-    github: "https://github.com/sofia-grunditz/js-project-weather-app",
-  }
-  ,
-  {
-    title: "Spearhead Merchandise Shop",
-    description: "For this project, I built a fully responsive merchandise shop for t-shirts and clothing using HTML, CSS, and JavaScript. The site features a flexible product grid, a hero section, a signup form with multiple input types, and a responsive hamburger menu. I used CSS Grid and Flexbox for layout and focused on clean, accessible code throughout.",
-    technologies: ["HTML5", "CSS3", "Node"],
-    image: "/images/imagespearhead.png",
-    github: "https://github.com/sofia-grunditz/js-project-business-site",
-    netlify: "https://watherrr.netlify.app/https://courageous-manatee-7edfdb.netlify.app/ttps://github.com/sofia-grunditz/js-project-business-site",
-  }
-  ,
-  {
-    title: "Web accessibility project",
-    description: "In this project, I built an accessible multiple-choice quiz designed for all users, including those using screen readers and keyboards. I used semantic HTML, ARIA roles. The quiz includes instant feedback via live regions, a “Skip to Content” link, and supports full keyboard navigation. I also followed WCAG guidelines for color contrast and tested accessibility using tools like WAVE and Lighthouse.",
-    technologies: ["HTML5", "CSS3", "Node"],
-    image: "/images/imagewebaccessibility.png",
-    github: "https://github.com/sofia-grunditz/js-project-accessibility",
-    netlify: "https://accessibilitysofiag.netlify.app/",
-  }
-];
 import styled from 'styled-components';
+import { device } from './theme';
 
+// Style för ProjectsSection
 const ProjectsSection = styled.section`
   width: 100%;
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background: white;
+  overflow: hidden;  /* Prevents overflow */
+  @media ${device.desktop} {
+    padding: 3rem 0;
+  }
+  @media ${device.tablet} {
+    padding: 2rem 16px;
+  }
+  @media ${device.mobile} {
+    padding: 1.5rem 12px;
+    align-items: center;
+  }
 `;
 
+// Style för ProjectsContainer
+const ProjectsContainer = styled.div`
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 128px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media ${device.desktop} {
+    width: 958px;
+    gap: 96px;
+  }
+
+  @media ${device.tablet} {
+    width: 680px;
+    gap: 64px;
+    padding-left: 32px;
+  }
+
+  @media ${device.mobile} {
+    width: 100%;
+    gap: 32px;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px; /* Added right margin to prevent overflow */
+  }
+`;
+
+// Title för Featured Projects
 const Title = styled.h2`
   color: #0B24F5;
   font-size: 80px;
   font-family: 'Montserrat';
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   margin-bottom: 4rem;
-`;
-
-const ProjectsContainer = styled.div`
+  margin-left: auto;
+  margin-right: auto;
   width: 1044px;
-  display: flex;
-  flex-direction: column;
-  gap: 128px;
+
+  @media ${device.desktop} {
+    font-size: 56px;
+    margin-bottom: 3rem;
+    width: 958px;
+  }
+
+  @media ${device.tablet} {
+    font-size: 40px;
+    margin-bottom: 2rem;
+    width: 680px;
+    padding-left: 32px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+    width: 343px;
+    padding-left: 16px;
+    text-align: center;
+  }
 `;
 
+// ProjectCard styling (för flex-layout)
 const ProjectCard = styled.div`
   display: flex;
   gap: 16px;
-  align-items: flex-start;
+  align-items: center; /* Ändrat från flex-start */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1044px; /* Sätter en maxbredd */
+  flex-wrap: wrap;
+  text-align: left;
+
+  @media ${device.desktop} {
+    max-width: 958px;
+  }
+
+  @media ${device.tablet} {
+    max-width: 680px;
+    align-items: center;
+  }
+
+  @media ${device.mobile} {
+    width: 100%;
+    align-items: center;
+  }
 `;
 
+// ProjectImage styling (justera för Figma-stilen)
 const ProjectImage = styled.img`
-  width: 408px;
-  height: 280px;
+ width: 100%;
+  max-width: 500px;
+  height: auto;
   border-left: 20px solid #0B24F5;
   border-bottom: 20px solid #0B24F5;
+  margin-left: 0;
+  margin-right: auto;
+
+  @media ${device.desktop} {
+    width: 380px;  /* Sätt en specifik bredd för desktop */
+    max-width: 100%;  /* Förhindrar att bilden blir större än containerbredden */
+  }
+
+  @media ${device.tablet} {
+    width: 340px;
+    max-width: 100%;
+  }
+
+  @media ${device.mobile} {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-shrink: 0;
+  }
 `;
 
+// ProjectContent styling för innehållsdelen
 const ProjectContent = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+
+  @media ${device.tablet} {
+    align-items: center;
+    text-align: center;
+  }
+
+  @media ${device.mobile} {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
+// ProjectTitle styling (till projektets titel)
 const ProjectTitle = styled.h3`
   font-size: 32px;
   font-family: 'Montserrat';
   font-weight: 600;
   color: black;
+  text-align: left;
+
+  margin-left: 16px;  /* Lägger till vänstermarginal på mindre skärmar */
+  margin-right: 16px; /* Lägger till höger marginal på mindre skärmar */
+
+  @media ${device.desktop} {
+    font-size: 28px;
+  }
+
+  @media ${device.tablet} {
+    font-size: 24px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 20px;
+  }
 `;
 
+// ProjectDescription styling (till projektbeskrivning)
 const ProjectDescription = styled.p`
-  font-size: 18px;
+ font-size: 18px;
   font-family: 'Hind';
   font-weight: 400;
   color: black;
+  text-align: left;
+  max-width: 100%;  /* Se till att den inte överstiger tillgänglig bredd */
+  margin-left: 16px;  /* Lägger till vänstermarginal på mindre skärmar */
+  margin-right: 16px; /* Lägger till höger marginal på mindre skärmar */
+
+  @media ${device.desktop} {
+    font-size: 16px;
+    max-width: 958px; /* Maxbredd för desktop */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media ${device.tablet} {
+    font-size: 16px;
+    max-width: 680px; /* Maxbredd för tablet */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 14px;
+    max-width: 343px; /* Maxbredd för mobil */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 `;
 
+// TechStack styling (för teknikstackens etiketter)
 const TechStack = styled.div`
   display: flex;
   gap: 4px;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 16px;  /* Lägger till vänstermarginal på mindre skärmar */
+  margin-right: 16px; /* Lägger till höger marginal på mindre skärmar */
 `;
 
+// Tech styling för varje teknologibadge
 const Tech = styled.div`
   padding: 2px 6px;
   background: black;
@@ -107,13 +244,41 @@ const Tech = styled.div`
   font-size: 16px;
   font-family: 'Montserrat';
   font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 8px;
+
+  @media ${device.tablet} {
+    font-size: 14px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 12px;
+  }
 `;
 
+// ButtonContainer styling för knappar
 const ButtonContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 32px;
+  justify-content: flex-start;
+  width: 100%;
+
+  @media ${device.desktop} {
+    gap: 28px;
+  }
+
+  @media ${device.tablet} {
+    justify-content: flex-start;
+  }
+
+  @media ${device.mobile} {
+    gap: 24px;
+  }
 `;
 
+// ActionButton styling för knapparna
 const ActionButton = styled.a`
   display: flex;
   align-items: center;
@@ -125,7 +290,56 @@ const ActionButton = styled.a`
   font-family: 'Montserrat';
   font-weight: 600;
   text-decoration: none;
+
+  @media ${device.desktop} {
+    font-size: 18px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  @media ${device.tablet} {
+    font-size: 18px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  @media ${device.mobile} {
+    font-size: 16px;
+    padding: 0.4rem 0.6rem;
+  }
 `;
+const projectData = [
+  {
+    title: "Recipe Library",
+    description: "I built a dynamic recipe library by integrating the Spoonacular API. I fetched real-time recipe data using fetch() and displayed it dynamically, adapting filtering and sorting to match the API's response format.",
+    technologies: ["HTML5", "CSS3", "Node"],
+    image: "/images/imagerecipe.png",
+    netlify: "https://recipeproject-sofia.netlify.app/",
+    github: "https://github.com/sofia-grunditz/js-project-recipe-library",
+  },
+  {
+    title: "Weather App",
+    description: "We created a responsive weather app using TypeScript and the OpenWeatherMap API. It displays current weather conditions, temperature, sunrise/sunset, and a 4-day forecast while following a design mockup.",
+    technologies: ["HTML5", "CSS3", "Node"],
+    image: "/images/imageweather.png",
+    netlify: "https://watherrr.netlify.app/",
+    github: "https://github.com/sofia-grunditz/js-project-weather-app",
+  },
+  {
+    title: "Spearhead Merchandise Shop",
+    description: "I built a responsive merchandise shop using HTML, CSS, and JavaScript. The site includes a flexible product grid, signup form, and hamburger menu, utilizing CSS Grid and Flexbox for layout.",
+    technologies: ["HTML5", "CSS3", "Node"],
+    image: "/images/imagespearhead.png",
+    github: "https://github.com/sofia-grunditz/js-project-business-site",
+    netlify: "https://courageous-manatee-7edfdb.netlify.app/",
+  },
+  {
+    title: "Web Accessibility Project",
+    description: "I built an accessible multiple-choice quiz using semantic HTML and ARIA roles. The quiz features live region feedback, keyboard navigation, and WCAG-compliant color contrast testing with WAVE and Lighthouse.",
+    technologies: ["HTML5", "CSS3", "Node"],
+    image: "/images/imagewebaccessibility.png",
+    github: "https://github.com/sofia-grunditz/js-project-accessibility",
+    netlify: "https://accessibilitysofiag.netlify.app/",
+  }
+];
 
 const Projects = () => {
   return (
