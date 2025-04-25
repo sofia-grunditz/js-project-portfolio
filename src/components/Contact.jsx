@@ -57,12 +57,27 @@ const SocialIconsWrapper = styled.div`
   align-items: flex-end;
 `;
 
-const SocialIcon = styled.div`
-  width: 32px;
-  height: 32px;
-  background: #D0D0D0;
+const SocialIconLink = styled.a`
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* Ta bort bakgrund om SVG har egen färg */
   border-radius: 50%;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #0B24F5;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    filter: invert(0); /* För att synas mot ljus bakgrund */
+  }
 `;
+
 
 const Contact = () => {
   return (
@@ -77,8 +92,12 @@ const Contact = () => {
           <InfoText>tora.s.grunditz@gmail.com</InfoText>
         </InfoContainer>
         <SocialIconsWrapper>
-          <SocialIcon />
-          <SocialIcon />
+          <SocialIconLink href="https://www.linkedin.com/in/sofia-grunditz-608648163/" target="_blank" rel="noopener noreferrer">
+            <img src="/linkedin.svg" alt="LinkedIn icon" />
+          </SocialIconLink>
+          <SocialIconLink href="https://github.com/sofia-grunditz" target="_blank" rel="noopener noreferrer">
+            <img src="/github.svg" alt="GitHub icon" />
+          </SocialIconLink>
         </SocialIconsWrapper>
       </ContactWrapper>
     </ContactSection>

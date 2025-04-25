@@ -2,26 +2,28 @@ import styled from 'styled-components';
 
 const TickerContainer = styled.div`
   width: 100%;
-  height: 100px;
+  height: auto;
+  min-height: 80px;
   background: #FF4575;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
   position: relative;
   bottom: 0;
   left: 0;
-  object-fit: obtain;
 `;
 
-const TickerText = styled.div`
+const TickerText = styled.p`
   color: white;
-  font-size: 26px;
+  font-size: clamp(16px, 4vw, 26px); /* Anpassar storlek beroende på skärmbredd */
   font-family: 'Montserrat';
   font-weight: 600;
-  line-height: 37px;
+  line-height: 1.4;
   text-align: center;
+  max-width: 90%;
+  word-wrap: break-word;
 `;
-
 const TickerTape = () => {
   return (
     <TickerContainer>
