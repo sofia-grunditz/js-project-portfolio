@@ -1,10 +1,20 @@
 import styled from 'styled-components';
-import { device } from "../components/theme.js";
+import { device } from "./theme.js";
+
 const BeyondCardWrapper = styled.div`
   background-color: #FFECEA;
   padding: 20px;
   border-radius: 10px;
   text-align: left;
+  width: 100%;
+
+  &:nth-child(3) { /* Det sista kortet */
+    justify-self: left; /* Centrerar kortet */
+  }
+
+  @media ${device.mobile} {
+    grid-column: auto;
+  }
 `;
 
 const BeyondImage = styled.img`

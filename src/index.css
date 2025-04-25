@@ -293,26 +293,6 @@ p {
   text-decoration: underline;
 }
 
-
-.squiggly-container {
-  background-color: #fce4ec;
-  /* Samma färg som Thoughts och Beyond */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  /* Full bredd */
-}
-
-.squiggly-line {
-  width: 100vw;
-  /* Gör linjen lika bred som hela viewporten */
-  height: auto;
-  object-fit: cover;
-  /* Se till att linjen anpassas */
-}
-
-
 .ticker-container {
   width: 100vw;
   /* Gör banderollen lika bred som hela skärmen */

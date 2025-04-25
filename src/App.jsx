@@ -8,6 +8,7 @@ import Beyond from './components/Beyond.jsx';
 import Skills from "./components/Skills.jsx";
 import Contact from './components/Contact.jsx';
 import TickerTape from "./components/TickerTape.jsx"; // Lägg till denna rad
+import SquigglyDivider from "./components/SquigglyDivider"; // ✅ Se till att detta finns!
 
 function App() {
   return (
@@ -16,16 +17,10 @@ function App() {
         <Header />
         <Tech />
         <Projects />
-        <div className="squiggly-container">
-          <img src="/divider.svg" alt="Squiggly Divider" className="squiggly-line" />
-        </div>
+        <SquigglyDivider /> {/* ✅ Rätt komponent */}
         <Thoughts />
 
-        {/* Squiggly divider mellan Thoughts och Beyond */}
-        <div className="squiggly-container">
-          <img src="/divider.svg" alt="Squiggly Divider" className="squiggly-line" />
-        </div>
-
+        <SquigglyDivider /> {/* ✅ Rätt komponent */}
         <Beyond />
         <Skills />
         <Contact />

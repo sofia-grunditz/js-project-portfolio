@@ -1,24 +1,19 @@
 import BeyondCard from "./BeyondCard";
 import beyondData from "../data/beyondData";
 import styled from "styled-components";
-import { device } from "./theme.js";
+import { device } from './theme.js';
+
 const BeyondContainer = styled.section`
-  text-align: left;
-  padding: 60px 234px;
   background-color: #FFECEA;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
+  width: 100%;
+  text-align: left;
 
   @media ${device.mobile} {
     padding: 40px 20px;
   }
 `;
-
 const SectionTitle = styled.h2`
-  max-width: 1044px;  
-  height: 100%;
+  max-width: 1044px;
   margin: 0 auto;
   color: #FF4575;
   font-size: 80px;
@@ -28,24 +23,34 @@ const SectionTitle = styled.h2`
   text-align: left;
   margin-bottom: 124px;
   margin-top: 150px;
-`;
 
-const BeyondGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  width: 80%;
-  max-width: 1200px;
-  background-color: #FFECEA;
-  padding: 20px;
-  border-radius: 12px;
-  justify-content: left;
+  @media ${device.mobile} {
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+  }
 
   @media ${device.tablet} {
-    grid-template-columns: 1fr;
+    font-size: 60px;
+    margin-top: 120px;
   }
 `;
+const BeyondGrid = styled.div`
+max-width: 1044px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Två per rad */
+  gap: 32px;
+  width: 100%;
 
+  @media ${device.tablet} {
+    grid-template-columns: 1fr; /* En per rad på tablet */
+  }
+
+  @media ${device.mobile} {
+    grid-template-columns: 1fr; /* En per rad på mobil */
+  }
+`;
 const Beyond = () => {
   return (
     <BeyondContainer>
