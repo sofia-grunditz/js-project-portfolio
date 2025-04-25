@@ -33,18 +33,7 @@ const HeaderContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-
-  @media ${device.desktop} {
-    width: 958px;
-  }
-
-  @media ${device.tablet} {
-    width: 680px;
-    align-items: flex-start;
-    gap: 32px;
-    left: 32px;
-    top: 128px;
-  }
+  position: relative; // 🔥 fix
 
   @media ${device.mobile} {
     width: 343px;
@@ -105,14 +94,18 @@ const ProfileSection = styled.div`
   gap: 22px;
 
   @media ${device.desktop} {
-    max-width: 680px;
     flex-direction: column;
-    align-items: center;
   }
 
   @media ${device.tablet} {
-    max-width: 343px;
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  @media ${device.mobile} {
+    flex-direction: column;
+    align-items: center;
     gap: 16px;
   }
 `;
@@ -142,13 +135,17 @@ const BioText = styled.div`
 
   @media ${device.desktop} {
     font-size: 16px;
-    text-align: left;
+    text-align: center;
   }
 
   @media ${device.tablet} {
     font-size: 14px;
-    text-align: left;
-    justify-content: left;
+    text-align: center;
+  }
+
+  @media ${device.mobile} {
+    font-size: 14px;
+    text-align: center;
   }
 `;
 
