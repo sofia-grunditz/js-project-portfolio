@@ -1,107 +1,149 @@
 import styled from 'styled-components';
+import { device } from './theme.js';
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background: #0B24F5;
-`;
-
-const ContentWrapper = styled.div`
-  position: absolute;
-  left: 234px;
-  top: 128px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 128px;
+
+
+  @media ${device.mobile} {
+    padding-top: 80px!important; 
+    padding-bottom: 80px!important; }
 `;
 
 const Title = styled.div`
-  width: 1044px;
+width: 1044px; /* Fixerad bredd */
+  max-width: 90%; /* Säkerhetsåtgärd så att den inte blir för stor */
   text-align: center;
   color: white;
   font-size: 80px;
   font-family: 'Montserrat';
   font-weight: 700;
   word-wrap: break-word;
+  display: block; /* Gör den mer stabil */
+  margin: 0 auto; /* Centrerar rubriken korrekt */
+  margin-bottom: 128px;
+
+  @media ${device.tablet} {
+    font-size: 56px;
+    width: 90%;
+    margin-bottom: 96px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 40px;
+    width: 90%;
+    margin-bottom: 64px;
+    margin-top: 64px;
+  }
 `;
 
 const SkillSections = styled.div`
-  width: 1044px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+width: 100%;
+  max-width: 1044px; /* Säkerställer att det inte överstiger skärmens bredd */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fyra kolumner på stora skärmar */
+  gap: 32px;
+  justify-items: center;
+
+  @media ${device.tablet} {
+    grid-template-columns: repeat(2, 1fr); /* Två per rad på tablet */
+    width: 90%; /* Anpassa bredden så att allt får plats */
+  }
+
+  @media ${device.mobile} {
+    grid-template-columns: repeat(1, 1fr); /* En per rad på mobil */
+    width: 90%; /* Säkerställa att innehållet får plats */
+  }
 `;
 
 const SkillContainer = styled.div`
-  display: flex;
+ display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  width: 100%; /* Gör att bredden följer sin föräldra-container */
+  max-width: 250px; /* Fixerad bredd på större skärmar */
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
+
+  @media ${device.mobile} {
+    width: 100%;
+  }
 `;
 
 const SkillHeader = styled.div`
-  padding: 2px;
+  padding: 8px;
   background: ${(props) => props.bgColor || 'transparent'};
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  display: inline-flex; /* Ändra från flex till inline-flex */
+  align-items: center;
+  justify-content: center;
+  width: fit-content; /* Gör så att bredden anpassas efter innehållet */
 `;
 
 const SkillTitle = styled.div`
   color: ${(props) => (props.textColor ? props.textColor : 'white')};
-  font-size: 32px;
+  font-size: 24px;
   font-family: 'Montserrat';
   font-weight: 600;
-  word-wrap: break-word;
 `;
 
 const SkillList = styled.div`
+  text-align: center;
   color: white;
   font-size: 18px;
   font-family: 'Hind';
   font-weight: 400;
   word-wrap: break-word;
+  overflow: hidden;
+  width: 100%;
+
+  @media ${device.mobile} {
+    font-size: 16px;
+    width: 95%;
+    padding: 8px;
+  }
 `;
 
 export default function Skills() {
   return (
     <Container>
-      <ContentWrapper>
-        <Title>Skills</Title>
-        <SkillSections>
-          <SkillContainer>
-            <SkillHeader bgColor="#EB5577">
-              <SkillTitle>Code</SkillTitle>
-            </SkillHeader>
-            <SkillList>HTML5<br />CSS3<br />Javascript ES6<br />React<br />Styled Components<br />GitHub<br />Markdown</SkillList>
-          </SkillContainer>
+      <Title>Skills</Title>
+      <SkillSections>
+        <SkillContainer>
+          <SkillHeader bgColor="#EB5577">
+            <SkillTitle>Code</SkillTitle>
+          </SkillHeader>
+          <SkillList>HTML5<br />CSS3<br />Javascript ES6<br />React<br />Styled Components<br />GitHub</SkillList>
+        </SkillContainer>
 
-          <SkillContainer>
-            <SkillHeader bgColor="#2483E0">
-              <SkillTitle>Toolbox</SkillTitle>
-            </SkillHeader>
-            <SkillList>Adobe Photoshop<br />Adobe Illustrator<br />Adobe FrameMaker<br />Oxygen<br />MadCap Flare<br />Slack<br />Teams<br />Confluence<br />Jira</SkillList>
-          </SkillContainer>
+        <SkillContainer>
+          <SkillHeader bgColor="#2483E0">
+            <SkillTitle>Toolbox</SkillTitle>
+          </SkillHeader>
+          <SkillList>Adobe Photoshop<br />Adobe Illustrator<br />Adobe FrameMaker<br />Oxygen<br />MadCap Flare<br />Slack<br />Teams<br />Confluence<br />Jira</SkillList>        </SkillContainer>
 
-          <SkillContainer>
-            <SkillHeader bgColor="#6DB486">
-              <SkillTitle>Upcoming</SkillTitle>
-            </SkillHeader>
-            <SkillList>Node.js</SkillList>
-          </SkillContainer>
+        <SkillContainer>
+          <SkillHeader bgColor="#6DB486">
+            <SkillTitle>Upcoming</SkillTitle>
+          </SkillHeader>
+          <SkillList>Node.js</SkillList>
+        </SkillContainer>
 
-          <SkillContainer>
-            <SkillHeader bgColor="#FFDE30">
-              <SkillTitle textColor="#0B24F5">More</SkillTitle>
-            </SkillHeader>
-            <SkillList>Photography<br />DITA<br />XML<br />Topic-based writing</SkillList>
-          </SkillContainer>
-        </SkillSections>
-      </ContentWrapper>
+        <SkillContainer>
+          <SkillHeader bgColor="#FFDE30">
+            <SkillTitle textColor="#0B24F5">More</SkillTitle>
+          </SkillHeader>
+          <SkillList>Photography<br />DITA<br />XML<br />Topic-based Writing</SkillList>
+        </SkillContainer>
+      </SkillSections>
     </Container>
   );
 }
