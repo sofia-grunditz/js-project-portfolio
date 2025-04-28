@@ -36,7 +36,7 @@ const SectionTitle = styled.h2`
   }
 `;
 const BeyondGrid = styled.div`
-max-width: 1044px;
+ width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Två per rad */

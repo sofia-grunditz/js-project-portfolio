@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from './theme';
 
 const ContactSection = styled.section`
   width: 100%;
@@ -20,20 +21,56 @@ const Title = styled.h2`
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-`;
 
+  @media ${device.desktop} {
+    font-size: 80px;
+  }
+
+  @media ${device.tablet} {
+    font-size: 70px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 56px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 48px;
+  }
+`;
 const ContactWrapper = styled.div`
-  width: 1044px;
+  width: 100%;
+  max-width: 1044px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 64px;
+  padding: 0 1rem;
+
+  @media ${device.desktop} {
+    width: 90%;
+  }
+
+  @media ${device.tablet} {
+    width: 90%;
+    gap: 64px;
+  }
+
+  @media ${device.mobile} {
+    width: 343px;
+    gap: 64px;
+  }
 `;
 
 const ProfileImage = styled.img`
   width: 164px;
   height: 164px;
   border-radius: 50%;
+
+  @media ${device.mobile} {
+    width: 164px;
+    height: 164px;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -49,6 +86,14 @@ const InfoText = styled.p`
   font-family: 'Montserrat';
   font-weight: 600;
   text-align: center;
+  word-break: break-word;
+overflow-wrap: break-word;
+
+  @media ${device.mobile} {
+    font-size: 18px;
+    word-break: break-word;
+overflow-wrap: break-word;
+  }
 `;
 
 const SocialIconsWrapper = styled.div`
@@ -63,7 +108,7 @@ const SocialIconLink = styled.a`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: transparent; /* Ta bort bakgrund om SVG har egen färg */
+  background: transparent;
   border-radius: 50%;
   transition: background 0.3s;
 
@@ -74,7 +119,17 @@ const SocialIconLink = styled.a`
   img {
     width: 24px;
     height: 24px;
-    filter: invert(0); /* För att synas mot ljus bakgrund */
+    filter: invert(0);
+  }
+
+  @media ${device.mobile} {
+    width: 32px;
+    height: 32px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 `;
 

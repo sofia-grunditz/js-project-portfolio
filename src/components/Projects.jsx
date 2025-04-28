@@ -118,8 +118,7 @@ const ProjectImage = styled.img`
  width: 100%;
   max-width: 500px;
   height: auto;
-  border-left: 20px solid #0B24F5;
-  border-bottom: 20px solid #0B24F5;
+
   margin-left: 0;
   margin-right: auto;
 

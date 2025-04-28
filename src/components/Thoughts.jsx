@@ -65,8 +65,6 @@ const ThoughtImage = styled.img`
   width: 100%;
   height: auto;
   background-color: #D9D9D9;
-  border-left: 20px solid #FF4575;
-  border-bottom: 20px solid #FF4575;
   display: block;
   margin-bottom: 40px;
 

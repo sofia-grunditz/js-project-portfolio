@@ -7,6 +7,7 @@ const BeyondCardWrapper = styled.div`
   border-radius: 10px;
   text-align: left;
   width: 100%;
+  box-sizing: border-box;
 
   &:nth-child(3) { /* Det sista kortet */
     justify-self: left; /* Centrerar kortet */
@@ -14,6 +15,11 @@ const BeyondCardWrapper = styled.div`
 
   @media ${device.mobile} {
     grid-column: auto;
+    padding: 0;
+    padding-top: 20px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
   }
 `;
 
