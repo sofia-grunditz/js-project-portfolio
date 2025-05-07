@@ -1,59 +1,55 @@
 import styled from 'styled-components';
 import { device } from './theme';
 
-// Style för ProjectsSection
 const ProjectsSection = styled.section`
   width: 100%;
-  padding: 4rem 0;
+  padding: 128px 0;
+  background: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background: white;
-  overflow: hidden;  /* Prevents overflow */
-  @media ${device.desktop} {
-    padding: 3rem 0;
-  }
+
   @media ${device.tablet} {
-    padding: 2rem 16px;
+    padding: 96px 16px;
   }
+
   @media ${device.mobile} {
-    padding: 1.5rem 12px;
+    padding: 64px 12px;
     align-items: center;
   }
 `;
 
-// Style för ProjectsContainer
 const ProjectsContainer = styled.div`
-  max-width: 100%;
-  width: 100%;
+  width: 1044px;
+  margin-left: 234px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 128px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media ${device.desktop} {
     width: 958px;
+    margin-left: auto;
+    margin-right: auto;
     gap: 96px;
   }
 
   @media ${device.tablet} {
     width: 680px;
-    gap: 64px;
+    margin: 0 auto;
     padding-left: 32px;
+    gap: 64px;
   }
 
   @media ${device.mobile} {
     width: 100%;
+    max-width: 343px;
+    margin: 0 auto;
+    padding: 0 16px;
     gap: 32px;
     align-items: center;
-    margin-left: 16px;
-    margin-right: 16px; /* Added right margin to prevent overflow */
   }
 `;
 
-// Title för Featured Projects
 const Title = styled.h2`
   color: #0B24F5;
   font-size: 80px;
@@ -80,100 +76,73 @@ const Title = styled.h2`
 
   @media ${device.mobile} {
     font-size: 32px;
-    margin-bottom: 1.5rem;
     width: 343px;
-    padding-left: 16px;
+    margin: 64px auto 24px auto;
     text-align: center;
+    padding: 0;
   }
 `;
 
-// ProjectCard styling (för flex-layout)
 const ProjectCard = styled.div`
   display: flex;
-  gap: 16px;
-  align-items: center; /* Ändrat från flex-start */
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1044px; /* Sätter en maxbredd */
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+  max-width: 1044px;
+  margin: 0 auto;
   flex-wrap: wrap;
-  text-align: left;
 
   @media ${device.desktop} {
     max-width: 958px;
   }
 
   @media ${device.tablet} {
-    max-width: 680px;
-    align-items: center;
+    flex-direction: column;
+    gap: 24px;
   }
 
   @media ${device.mobile} {
-    width: 100%;
-    align-items: center;
+    flex-direction: column;
+    gap: 16px;
   }
 `;
 
-
 const ProjectImage = styled.img`
- width: 100%;
+  width: 100%;
   max-width: 500px;
-  height: auto;
-
-  margin-left: 0;
-  margin-right: auto;
 
   @media ${device.desktop} {
-    width: 380px;  
-    max-width: 100%;  
+    width: 380px;
   }
 
   @media ${device.tablet} {
     width: 340px;
-    max-width: 100%;
   }
 
   @media ${device.mobile} {
     width: 100%;
-    height: auto;
-    max-width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-    flex-shrink: 0;
+    padding: 0 16px;
   }
 `;
-
 
 const ProjectContent = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 16px;
 
-  @media ${device.tablet} {
+  @media ${device.tablet}, ${device.mobile} {
     align-items: center;
     text-align: center;
   }
-
-  @media ${device.mobile} {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
 `;
-
 
 const ProjectTitle = styled.h3`
   font-size: 32px;
   font-family: 'Montserrat';
   font-weight: 600;
   color: black;
-  text-align: left;
-
-  margin-left: 16px;  
-  margin-right: 16px; 
 
   @media ${device.desktop} {
     font-size: 28px;
@@ -188,50 +157,40 @@ const ProjectTitle = styled.h3`
   }
 `;
 
-
 const ProjectDescription = styled.p`
- font-size: 18px;
+  font-size: 18px;
   font-family: 'Hind';
   font-weight: 400;
   color: black;
-  text-align: left;
-  max-width: 100%;  
-  margin-left: 16px; 
-  margin-right: 16px; 
+  max-width: 100%;
 
   @media ${device.desktop} {
     font-size: 16px;
     max-width: 958px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   @media ${device.tablet} {
     font-size: 16px;
-    max-width: 680px; 
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    max-width: 680px;
+    padding: 0 16px;
   }
 
   @media ${device.mobile} {
     font-size: 14px;
-    max-width: 343px; 
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 12px;
-    padding-right: 12px;
+    max-width: 343px;
+    padding: 0 12px;
   }
 `;
 
 const TechStack = styled.div`
   display: flex;
-  gap: 4px;
   flex-wrap: wrap;
-  justify-content: left;
-  margin-left: 16px;  
-  margin-right: 16px; 
+  gap: 4px;
+  justify-content: flex-start;
+
+  @media ${device.tablet}, ${device.mobile} {
+    justify-content: center;
+  }
 `;
 
 const Tech = styled.div`
@@ -241,8 +200,7 @@ const Tech = styled.div`
   font-size: 16px;
   font-family: 'Montserrat';
   font-weight: 600;
-  margin-bottom: 8px;
-  margin-top: 8px;
+  margin: 8px 4px 0 0;
 
   @media ${device.tablet} {
     font-size: 14px;
@@ -255,22 +213,16 @@ const Tech = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   gap: 32px;
-  justify-content: flex-start;
   width: 100%;
 
   @media ${device.desktop} {
     gap: 28px;
   }
 
-  @media ${device.tablet} {
-    justify-content: flex-start;
-  }
-
   @media ${device.mobile} {
     gap: 24px;
+    justify-content: center;
   }
 `;
 
@@ -301,10 +253,12 @@ const ActionButton = styled.a`
     padding: 0.4rem 0.6rem;
   }
 `;
+
 const projectData = [
   {
     title: "Recipe Library",
-    description: "I built a dynamic recipe library by integrating the Spoonacular API. I fetched real-time recipe data using fetch() and displayed it dynamically, adapting filtering and sorting to match the API's response format.",
+    description:
+      "I built a dynamic recipe library by integrating the Spoonacular API. I fetched real-time recipe data using fetch() and displayed it dynamically, adapting filtering and sorting to match the API's response format.",
     technologies: ["HTML5", "CSS3", "Node"],
     image: "/images/imagerecipe.png",
     netlify: "https://recipeproject-sofia.netlify.app/",
@@ -312,7 +266,8 @@ const projectData = [
   },
   {
     title: "Weather App",
-    description: "We created a responsive weather app using TypeScript and the OpenWeatherMap API. It displays current weather conditions, temperature, sunrise/sunset, and a 4-day forecast while following a design mockup.",
+    description:
+      "We created a responsive weather app using TypeScript and the OpenWeatherMap API. It displays current weather conditions, temperature, sunrise/sunset, and a 4-day forecast while following a design mockup.",
     technologies: ["HTML5", "CSS3", "Node"],
     image: "/images/imageweather.png",
     netlify: "https://watherrr.netlify.app/",
@@ -320,7 +275,8 @@ const projectData = [
   },
   {
     title: "Spearhead Merchandise Shop",
-    description: "I built a responsive merchandise shop using HTML, CSS, and JavaScript. The site includes a flexible product grid, signup form, and hamburger menu, utilizing CSS Grid and Flexbox for layout.",
+    description:
+      "I built a responsive merchandise shop using HTML, CSS, and JavaScript. The site includes a flexible product grid, signup form, and hamburger menu, utilizing CSS Grid and Flexbox for layout.",
     technologies: ["HTML5", "CSS3", "Node"],
     image: "/images/imagespearhead.png",
     github: "https://github.com/sofia-grunditz/js-project-business-site",
@@ -328,12 +284,13 @@ const projectData = [
   },
   {
     title: "Web Accessibility Project",
-    description: "I built an accessible multiple-choice quiz using semantic HTML and ARIA roles. The quiz features live region feedback, keyboard navigation, and WCAG-compliant color contrast testing with WAVE and Lighthouse.",
+    description:
+      "I built an accessible multiple-choice quiz using semantic HTML and ARIA roles. The quiz features live region feedback, keyboard navigation, and WCAG-compliant color contrast testing with WAVE and Lighthouse.",
     technologies: ["HTML5", "CSS3", "Node"],
     image: "/images/imagewebaccessibility.png",
     github: "https://github.com/sofia-grunditz/js-project-accessibility",
     netlify: "https://accessibilitysofiag.netlify.app/",
-  }
+  },
 ];
 
 const Projects = () => {
@@ -355,8 +312,12 @@ const Projects = () => {
                 </TechStack>
               </div>
               <ButtonContainer>
-                <ActionButton href={project.netlify} target="_blank">Live Demo</ActionButton>
-                <ActionButton href={project.github} target="_blank">View the Code</ActionButton>
+                <ActionButton href={project.netlify} target="_blank">
+                  Live Demo
+                </ActionButton>
+                <ActionButton href={project.github} target="_blank">
+                  View the Code
+                </ActionButton>
               </ButtonContainer>
             </ProjectContent>
           </ProjectCard>

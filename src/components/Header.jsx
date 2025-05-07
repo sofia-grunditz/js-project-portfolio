@@ -3,24 +3,21 @@ import { device } from './theme';
 
 const HeaderContainer = styled.div`
   width: 100%;
-  min-height: 1000px;
+  min-height: 100vh;
   background: white;
   position: relative;
-  padding-top: 332px;
+  padding-top: 250px;
 
   @media ${device.desktop} {
-    min-height: 850px;
     padding-top: 250px;
   }
 
   @media ${device.tablet} {
-    min-height: 700px;
     padding-top: 180px;
   }
 
   @media ${device.mobile} {
-    min-height: 600px;
-    padding-top: 120px;
+    padding-top: 64px;
   }
 `;
 
@@ -31,14 +28,12 @@ const HeaderContent = styled.div`
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+  gap: 32px;
 
   @media ${device.mobile} {
     max-width: 343px;
-    align-items: center;
-    gap: 32px;
     padding: 0 16px;
+    align-items: center;
   }
 `;
 
@@ -52,13 +47,13 @@ const ProfileSection = styled.div`
   @media ${device.mobile} {
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 32px;
   }
 `;
 
 const ProfileImage = styled.img`
-  width: 164px;
-  height: 164px;
+  width: 140px;
+  height: 140px;
   border-radius: 9999px;
 
   @media ${device.tablet} {
@@ -66,12 +61,9 @@ const ProfileImage = styled.img`
     height: 120px;
   }
 
-  @media ${device.desktop} {
-    width: 140px;
-    height: 140px;
-  }
-
   @media ${device.mobile} {
+    width: 164px;
+    height: 164px;
     order: -1;
   }
 `;
@@ -85,6 +77,7 @@ const TextBlock = styled.div`
   @media ${device.mobile} {
     align-items: center;
     text-align: center;
+    gap: 22px;
   }
 `;
 
@@ -100,7 +93,7 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 32px;
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: black;
@@ -121,7 +114,7 @@ const Subtitle = styled.div`
   }
 
   @media ${device.mobile} {
-    font-size: 24px;
+    font-size: 32px;
   }
 `;
 
@@ -142,18 +135,14 @@ const ArrowContainer = styled.div`
   width: 27px;
   height: 68px;
   position: absolute;
-  left: 742px;
-  top: 849px;
-
-  @media ${device.desktop} {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 80%;
-  }
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80%;
 
   @media ${device.mobile} {
     position: static;
     margin-top: 32px;
+    transform: none;
   }
 `;
 

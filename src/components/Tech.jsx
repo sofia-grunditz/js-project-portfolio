@@ -3,17 +3,17 @@ import { device } from './theme';
 
 const TechContainer = styled.section`
   width: 100%;
-  padding: 128px 0;
+  padding: 160px 0;
   background: #0B24F5;
   display: flex;
   justify-content: center;
 
   @media ${device.tablet} {
-    padding: 100px 0;
+    padding: 120px 0;
   }
 
   @media ${device.mobile} {
-    padding: 60px 16px;
+    padding: 80px 16px;
   }
 `;
 
@@ -35,7 +35,8 @@ const TechContent = styled.div`
   @media ${device.mobile} {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    text-align: center;
+    gap: 32px;
     max-width: 343px;
   }
 `;
@@ -45,14 +46,14 @@ const TechTitle = styled.h2`
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: white;
+  margin: 0;
 
   @media ${device.tablet} {
     font-size: 56px;
   }
 
   @media ${device.mobile} {
-    font-size: 56px;
-    text-align: center;
+    font-size: 40px;
   }
 `;
 
@@ -61,16 +62,16 @@ const TechSkills = styled.p`
   font-family: 'Hind', sans-serif;
   font-weight: 600;
   color: white;
+  margin: 0;
 
   @media ${device.tablet} {
     font-size: 24px;
-    text-align: center;
   }
 
   @media ${device.mobile} {
-    font-size: 24px;
-    text-align: left;
-    max-width: 343px;}
+    font-size: 18px;
+    max-width: 343px;
+  }
 `;
 
 export default function Tech() {

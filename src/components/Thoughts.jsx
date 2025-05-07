@@ -5,32 +5,41 @@ const ThoughtsSection = styled.section`
   background-color: #FFECEA;
   width: 100%;
   text-align: left;
-  padding: 100px 20px 60px; /* padding istället för margin på Title */
+  padding: 124px 0 60px;
+
+  @media ${device.tablet} {
+    padding: 100px 0 60px;
+  }
 
   @media ${device.mobile} {
     padding: 60px 15px 40px;
   }
 `;
 
+
 const Title = styled.h2`
-  max-width: 1044px;
-  margin: 0 auto 124px; /* bara bottom-marginal */
   color: #D5003C;
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   word-wrap: break-word;
+  margin-bottom: 128px;
+  padding-left: 234px;
+  max-width: 1044px;
   text-align: left;
-
-  @media ${device.mobile} {
-    font-size: 40px;
-    margin-bottom: 80px;
-  }
 
   @media ${device.tablet} {
     font-size: 60px;
+    padding-left: 32px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 40px;
+    padding-left: 16px;
+    margin-bottom: 80px;
   }
 `;
+
 
 const ThoughtsContainer = styled.div`
   max-width: 1044px;
@@ -68,16 +77,21 @@ const ThoughtImage = styled.img`
   background-color: #D9D9D9;
   display: block;
   margin-bottom: 40px;
+  padding-left: 0;
+
+  @media ${device.desktop} {
+    padding-left: 234px;
+  }
+
+  @media ${device.tablet} {
+    padding-left: 32px;
+  }
 
   @media ${device.mobile} {
-    width: 100%;
-    height: auto; 
-  }
-  
-  @media ${device.tablet} {
-    width: 90%; 
+    padding-left: 0;
   }
 `;
+
 
 const ThoughtContent = styled.div`
   width: 100%; 
