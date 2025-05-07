@@ -149,7 +149,7 @@ export default function Skills() {
         </SkillContainer>
 
         <SkillContainer>
-          <SkillHeader $bgColor="#6DB486">
+          <SkillHeader $bgColor="#397A5E">
             <SkillTitle>Upcoming</SkillTitle>
           </SkillHeader>
           <SkillList>
