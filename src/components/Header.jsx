@@ -23,7 +23,6 @@ const HeaderContainer = styled.div`
   @media ${device.mobile} {
     min-height: 400px;
     justify-content: center;
-    padding: 30px 12px;
   }
 `;
 

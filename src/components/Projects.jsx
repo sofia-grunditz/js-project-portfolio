@@ -113,7 +113,7 @@ const ProjectCard = styled.div`
   }
 `;
 
-// ProjectImage styling (justera för Figma-stilen)
+
 const ProjectImage = styled.img`
  width: 100%;
   max-width: 500px;
@@ -123,8 +123,8 @@ const ProjectImage = styled.img`
   margin-right: auto;
 
   @media ${device.desktop} {
-    width: 380px;  /* Sätt en specifik bredd för desktop */
-    max-width: 100%;  /* Förhindrar att bilden blir större än containerbredden */
+    width: 380px;  
+    max-width: 100%;  
   }
 
   @media ${device.tablet} {
@@ -142,7 +142,7 @@ const ProjectImage = styled.img`
   }
 `;
 
-// ProjectContent styling för innehållsdelen
+
 const ProjectContent = styled.div`
   flex: 1;
   display: flex;
@@ -164,7 +164,7 @@ const ProjectContent = styled.div`
   }
 `;
 
-// ProjectTitle styling (till projektets titel)
+
 const ProjectTitle = styled.h3`
   font-size: 32px;
   font-family: 'Montserrat';
@@ -172,8 +172,8 @@ const ProjectTitle = styled.h3`
   color: black;
   text-align: left;
 
-  margin-left: 16px;  /* Lägger till vänstermarginal på mindre skärmar */
-  margin-right: 16px; /* Lägger till höger marginal på mindre skärmar */
+  margin-left: 16px;  
+  margin-right: 16px; 
 
   @media ${device.desktop} {
     font-size: 28px;
@@ -188,27 +188,27 @@ const ProjectTitle = styled.h3`
   }
 `;
 
-// ProjectDescription styling (till projektbeskrivning)
+
 const ProjectDescription = styled.p`
  font-size: 18px;
   font-family: 'Hind';
   font-weight: 400;
   color: black;
   text-align: left;
-  max-width: 100%;  /* Se till att den inte överstiger tillgänglig bredd */
-  margin-left: 16px;  /* Lägger till vänstermarginal på mindre skärmar */
-  margin-right: 16px; /* Lägger till höger marginal på mindre skärmar */
+  max-width: 100%;  
+  margin-left: 16px; 
+  margin-right: 16px; 
 
   @media ${device.desktop} {
     font-size: 16px;
-    max-width: 958px; /* Maxbredd för desktop */
+    max-width: 958px;
     margin-left: auto;
     margin-right: auto;
   }
 
   @media ${device.tablet} {
     font-size: 16px;
-    max-width: 680px; /* Maxbredd för tablet */
+    max-width: 680px; 
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
@@ -217,7 +217,7 @@ const ProjectDescription = styled.p`
 
   @media ${device.mobile} {
     font-size: 14px;
-    max-width: 343px; /* Maxbredd för mobil */
+    max-width: 343px; 
     margin-left: auto;
     margin-right: auto;
     padding-left: 12px;
@@ -225,17 +225,15 @@ const ProjectDescription = styled.p`
   }
 `;
 
-// TechStack styling (för teknikstackens etiketter)
 const TechStack = styled.div`
   display: flex;
   gap: 4px;
   flex-wrap: wrap;
   justify-content: left;
-  margin-left: 16px;  /* Lägger till vänstermarginal på mindre skärmar */
-  margin-right: 16px; /* Lägger till höger marginal på mindre skärmar */
+  margin-left: 16px;  
+  margin-right: 16px; 
 `;
 
-// Tech styling för varje teknologibadge
 const Tech = styled.div`
   padding: 2px 6px;
   background: black;
@@ -255,7 +253,6 @@ const Tech = styled.div`
   }
 `;
 
-// ButtonContainer styling för knappar
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -277,7 +274,6 @@ const ButtonContainer = styled.div`
   }
 `;
 
-// ActionButton styling för knapparna
 const ActionButton = styled.a`
   display: flex;
   align-items: center;

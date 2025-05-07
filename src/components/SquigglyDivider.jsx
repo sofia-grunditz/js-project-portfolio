@@ -20,9 +20,9 @@ const SquigglyContainer = styled.div`
 `;
 
 const SquigglyLine = styled.img`
-   width: 100%;
+  width: 100%;
   height: auto;
-  display: block; /* Tar bort oönskat mellanrum under bilden */
+  display: block; 
   object-fit: cover;
 
   @media ${device.tablet} {
@@ -40,4 +40,4 @@ const SquigglyDivider = () => (
   </SquigglyContainer>
 );
 
-export default SquigglyDivider; // ✅ Viktigt: Detta gör att du kan importera den som default-export!
+export default SquigglyDivider; 

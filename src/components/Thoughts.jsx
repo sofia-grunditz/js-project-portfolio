@@ -1,33 +1,34 @@
 import styled from 'styled-components';
-import { device } from './theme'; // Importera device från din theme.js
+import { device } from './theme';
 
 const ThoughtsSection = styled.section`
   background-color: #FFECEA;
   width: 100%;
   text-align: left;
+  padding: 100px 20px 60px; /* padding istället för margin på Title */
+
+  @media ${device.mobile} {
+    padding: 60px 15px 40px;
+  }
 `;
 
 const Title = styled.h2`
   max-width: 1044px;
-  margin: 0 auto;
+  margin: 0 auto 124px; /* bara bottom-marginal */
   color: #FF4575;
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   word-wrap: break-word;
   text-align: left;
-  margin-bottom: 124px;
-  margin-top: 150px;
-  
+
   @media ${device.mobile} {
     font-size: 40px;
-    margin-top: 100px;
-    margin-bottom: 80px; /* Minska avståndet på mobil */
+    margin-bottom: 80px;
   }
-  
+
   @media ${device.tablet} {
     font-size: 60px;
-    margin-top: 120px;
   }
 `;
 
@@ -39,13 +40,13 @@ const ThoughtsContainer = styled.div`
   gap: 64px;
   
   @media ${device.mobile} {
-    width: 100%; /* Full bredd på mobil */
-    gap: 24px; /* Mindre gap på mobil */
+    width: 100%;
+    gap: 24px; 
   }
   
   @media ${device.tablet} {
-    width: 95%; /* Justera bredden för tablet */
-    gap: 48px; /* Mellanstort gap för tablet */
+    width: 95%; 
+    gap: 48px; 
   }
 `;
 
@@ -70,23 +71,23 @@ const ThoughtImage = styled.img`
 
   @media ${device.mobile} {
     width: 100%;
-    height: auto; /* Behåll bildens förhållande */
+    height: auto; 
   }
   
   @media ${device.tablet} {
-    width: 90%; /* Bilden blir något mindre på tablet */
+    width: 90%; 
   }
 `;
 
 const ThoughtContent = styled.div`
-  width: 100%; /* Justera bredden för att göra den responsiv */
+  width: 100%; 
   display: flex;
   flex-direction: column;
   gap: 4px;
-  box-sizing: border-box; /* Se till att padding inte gör innehållet för brett */
+  box-sizing: border-box; 
   
   @media ${device.mobile} {
-    width: 100%; /* Full bredd på mobil */
+    width: 100%; 
   }
 `;
 const DateTag = styled.div`
@@ -101,7 +102,7 @@ const DateTag = styled.div`
   white-space: nowrap;
   
   @media ${device.mobile} {
-    font-size: 14px; /* Minska textstorleken på mobil */
+    font-size: 14px; 
   }
 `;
 
@@ -110,7 +111,7 @@ const ThoughtTitle = styled.h3`
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: black;
-  width: 100%; /* Justera bredden till 100% för att undvika overflow */
+  width: 100%; 
   box-sizing: border-box;
   
   @media ${device.mobile} {
@@ -129,18 +130,18 @@ const ThoughtText = styled.p`
   font-weight: 400;
   color: black;
   line-height: 1.6;
-  max-width: 100%; /* Gör texten flexibel */
+  max-width: 100%; 
   text-align: left;
-  box-sizing: border-box; /* Se till att padding inte gör texten för bred */
+  box-sizing: border-box;
 
   @media ${device.mobile} {
     font-size: 16px;
-    padding: 0 15px; /* Lägg till padding så att texten inte går till kanten */
+    padding: 0 15px; 
   }
   
   @media ${device.tablet} {
     font-size: 18px;
-    padding: 0 20px; /* Lägg till padding för tablet */
+    padding: 0 20px; 
   }
 `;
 

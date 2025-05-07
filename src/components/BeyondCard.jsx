@@ -6,20 +6,11 @@ const BeyondCardWrapper = styled.div`
   padding: 20px;
   border-radius: 10px;
   text-align: left;
-  width: 100%;
   box-sizing: border-box;
-
-  &:nth-child(3) { /* Det sista kortet */
-    justify-self: left; /* Centrerar kortet */
-  }
+  width: 100%;
 
   @media ${device.mobile} {
-    grid-column: auto;
-    padding: 0;
-    padding-top: 20px;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 20px 0;
   }
 `;
 

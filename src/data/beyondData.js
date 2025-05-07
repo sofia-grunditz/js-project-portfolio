@@ -10,7 +10,7 @@ const beyondData = [
     title: "Published in Författaren #3 2016",
     description: "I was invited by the Swedish Writers’ Union (Sveriges Författarförbund) to share some of my work for publication in their magazine Författaren. This resulted in a two-page spread featuring my literary fiction.",
     image: "/images/forfattaren.png",
-    link: "",
+    link: null,
     buttonType: "portfolio"
   },
   {

@@ -16,7 +16,7 @@ const TickerContainer = styled.div`
 
 const TickerText = styled.p`
   color: white;
-  font-size: clamp(16px, 4vw, 26px); /* Anpassar storlek beroende på skärmbredd */
+  font-size: clamp(16px, 4vw, 26px); 
   font-family: 'Montserrat';
   font-weight: 600;
   line-height: 1.4;
