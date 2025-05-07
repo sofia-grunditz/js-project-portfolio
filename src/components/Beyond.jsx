@@ -16,7 +16,7 @@ const BeyondContainer = styled.section`
 const SectionTitle = styled.h2`
   max-width: 1044px;
   margin: 0 auto 124px;
-  color: #FF4575;
+  color: #D5003C;
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;

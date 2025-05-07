@@ -3,104 +3,51 @@ import { device } from './theme';
 
 const HeaderContainer = styled.div`
   width: 100%;
-  min-height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 1000px;
   background: white;
   position: relative;
+  padding-top: 332px;
 
   @media ${device.desktop} {
-    min-height: 650px;
+    min-height: 850px;
+    padding-top: 250px;
   }
 
   @media ${device.tablet} {
-    min-height: 500px;
-    justify-content: flex-start;
-    padding: 40px 16px;
+    min-height: 700px;
+    padding-top: 180px;
   }
 
   @media ${device.mobile} {
-    min-height: 400px;
-    justify-content: center;
+    min-height: 600px;
+    padding-top: 120px;
   }
 `;
 
 const HeaderContent = styled.div`
-  width: 1044px;
+  width: 100%;
+  max-width: 1044px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  position: relative; // 🔥 fix
 
   @media ${device.mobile} {
-    width: 343px;
+    max-width: 343px;
     align-items: center;
     gap: 32px;
-    left: 16px;
-    top: 64px;
-  }
-`;
-
-const TitleContainer = styled.div`
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @media ${device.tablet} {
-    align-items: center;
-  }
-`;
-
-const Title = styled.div`
-  align-self: stretch;
-  font-size: 32px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: black;
-
-  @media ${device.desktop} {
-    font-size: 24px;
-  }
-
-  @media ${device.tablet} {
-    font-size: 18px;
-  }
-`;
-
-const Subtitle = styled.div`
-  align-self: stretch;
-  font-size: 80px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #0B24F5;
-
-  @media ${device.desktop} {
-    font-size: 56px;
-  }
-
-  @media ${device.tablet} {
-    font-size: 32px;
+    padding: 0 16px;
   }
 `;
 
 const ProfileSection = styled.div`
-  align-self: stretch;
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 22px;
-
-  @media ${device.desktop} {
-    flex-direction: column;
-  }
-
-  @media ${device.tablet} {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
 
   @media ${device.mobile} {
     flex-direction: column;
@@ -114,37 +61,80 @@ const ProfileImage = styled.img`
   height: 164px;
   border-radius: 9999px;
 
+  @media ${device.tablet} {
+    width: 120px;
+    height: 120px;
+  }
+
   @media ${device.desktop} {
     width: 140px;
     height: 140px;
   }
 
+  @media ${device.mobile} {
+    order: -1;
+  }
+`;
+
+const TextBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+
+  @media ${device.mobile} {
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media ${device.mobile} {
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const Title = styled.div`
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: black;
+`;
+
+const Subtitle = styled.div`
+  font-size: 80px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #0B24F5;
+
+  @media ${device.desktop} {
+    font-size: 56px;
+  }
+
   @media ${device.tablet} {
-    width: 120px;
-    height: 120px;
+    font-size: 32px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 24px;
   }
 `;
 
 const BioText = styled.div`
-  flex: 1;
   font-size: 18px;
   font-family: 'Hind', sans-serif;
   font-weight: 400;
   color: black;
-
-  @media ${device.desktop} {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  @media ${device.tablet} {
-    font-size: 14px;
-    text-align: center;
-  }
+  text-align: left;
 
   @media ${device.mobile} {
-    font-size: 14px;
     text-align: center;
+    max-width: 343px;
   }
 `;
 
@@ -152,48 +142,57 @@ const ArrowContainer = styled.div`
   width: 27px;
   height: 68px;
   position: absolute;
-  bottom: -40px; 
-  left: 50%;
-  transform: translateX(-50%);
+  left: 742px;
+  top: 849px;
 
   @media ${device.desktop} {
-    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
   }
 
-  @media ${device.tablet} {
-    bottom: -20px;
+  @media ${device.mobile} {
+    position: static;
+    margin-top: 32px;
   }
 `;
 
 const Arrow = styled.img`
   width: 30px;
   height: 45px;
-  transform: rotate(0deg); 
 `;
 
 export default function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <TitleContainer>
-          <Title>Hi, I’m Sofia Grunditz</Title>
-          <Subtitle>Technical Writer & Frontend Dev</Subtitle>
-        </TitleContainer>
         <ProfileSection>
-          <ProfileImage src="https://media.licdn.com/dms/image/v2/D4D03AQHWEWzpKrj68g/profile-displayphoto-shrink_800_800/B4DZUJMZ5OHIAc-/0/1739616002532?e=1750896000&v=beta&t=ZmnSJeBUPKitAPWwg3EgGzGHpFT0VS8EEUXQ_UAUGXs"
-            alt="Sofia Grunditz" />
-          <BioText>
-            Sofia is a technical writer with a strong editorial background and a growing focus on front-end development.
-            Her journey into web development grew out of a desire to combine content and interaction—to not just write
-            about systems, but understand and build them. She is currently expanding her skills in front-end development,
-            learning how to create accessible, responsive interfaces and exploring how design and documentation can work
-            together.
-          </BioText>
+          <ProfileImage
+            src="https://media.licdn.com/dms/image/v2/D4D03AQHWEWzpKrj68g/profile-displayphoto-shrink_800_800/B4DZUJMZ5OHIAc-/0/1739616002532?e=1750896000&v=beta&t=ZmnSJeBUPKitAPWwg3EgGzGHpFT0VS8EEUXQ_UAUGXs"
+            alt="Sofia Grunditz"
+          />
+
+          <TextBlock>
+            <TitleContainer>
+              <Title>Hi, I’m Sofia Grunditz</Title>
+              <Subtitle>Technical Writer & Frontend Dev</Subtitle>
+            </TitleContainer>
+
+            <BioText>
+              Sofia is a technical writer with a strong editorial background and a growing
+              focus on front-end development. Her journey into web development grew out of
+              a desire to combine content and interaction—to not just write about systems,
+              but understand and build them. She is currently expanding her skills in
+              front-end development, learning how to create accessible, responsive
+              interfaces and exploring how design and documentation can work together.
+            </BioText>
+          </TextBlock>
         </ProfileSection>
+
+        <ArrowContainer>
+          <Arrow src="/arrow.svg" alt="Scroll Down Arrow" />
+        </ArrowContainer>
       </HeaderContent>
-      <ArrowContainer>
-        <Arrow src="/arrow.svg" alt="Scroll Down Arrow" />
-      </ArrowContainer>
     </HeaderContainer>
   );
 }

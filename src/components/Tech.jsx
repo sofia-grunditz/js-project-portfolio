@@ -1,52 +1,46 @@
 import styled from 'styled-components';
 import { device } from './theme';
 
-const TechContainer = styled.div`
+const TechContainer = styled.section`
   width: 100%;
-  min-height: 600px;
+  padding: 128px 0;
+  background: #0B24F5;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: #0B24F5;
-  margin-top: 200px;
 
   @media ${device.tablet} {
-    min-height: 500px;
-    margin-top: 100px;
+    padding: 100px 0;
   }
 
   @media ${device.mobile} {
-    min-height: 400px;
-    padding: 20px;
-    margin-top: 60px;
+    padding: 60px 16px;
   }
 `;
 
 const TechContent = styled.div`
-  width: 1044px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 124px;
+  max-width: 1044px;
+  width: 100%;
 
   @media ${device.tablet} {
-    width: 680px;
     flex-direction: column;
-    gap: 64px;
     align-items: center;
     text-align: center;
+    gap: 64px;
+    max-width: 680px;
   }
 
   @media ${device.mobile} {
-    width: 343px;
     flex-direction: column;
-    gap: 24px;
     align-items: center;
-    text-align: center;
+    gap: 24px;
+    max-width: 343px;
   }
 `;
 
-const TechTitle = styled.div`
+const TechTitle = styled.h2`
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -54,18 +48,15 @@ const TechTitle = styled.div`
 
   @media ${device.tablet} {
     font-size: 56px;
-    text-align: center;
   }
 
   @media ${device.mobile} {
     font-size: 56px;
     text-align: center;
-    margin-top: 128px;
   }
 `;
 
-const TechSkills = styled.div`
-  flex: 1;
+const TechSkills = styled.p`
   font-size: 32px;
   font-family: 'Hind', sans-serif;
   font-weight: 600;
@@ -78,10 +69,8 @@ const TechSkills = styled.div`
 
   @media ${device.mobile} {
     font-size: 24px;
-    width: 343px;
-    text-align: center;
-    margin-top: 20px;
-  }
+    text-align: left;
+    max-width: 343px;}
 `;
 
 export default function Tech() {
@@ -90,8 +79,7 @@ export default function Tech() {
       <TechContent>
         <TechTitle>Tech</TechTitle>
         <TechSkills>
-          HTML, CSS, Flexbox, JavaScript, ES6, JSX, React, React Hooks, Node.js, Mongo DB, Web Accessibility, APIs,
-          mob-programming, pair-programming, GitHub.
+          HTML, CSS, Flexbox, JavaScript, ES6, JSX, React, React Hooks, Node.js, Mongo DB, Web Accessibility, APIs, mob-programming, pair-programming, GitHub.
         </TechSkills>
       </TechContent>
     </TechContainer>
