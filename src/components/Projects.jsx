@@ -71,7 +71,7 @@ const Title = styled.h2`
   }
 
   @media ${device.tablet} {
-    font-size: 40px;
+    font-size: 60px;
   margin: 0 auto 64px auto;
   width: 100%;
   text-align: center;
@@ -79,7 +79,7 @@ const Title = styled.h2`
   }
 
   @media ${device.mobile} {
-    font-size: 32px;
+    font-size: 40px;
     width: 343px;
     margin: 64px auto 32px auto;
     text-align: center;
