@@ -2,46 +2,57 @@ import styled from 'styled-components';
 import { device } from "./theme.js";
 
 const BeyondCardWrapper = styled.div`
-  background-color: #FFECEA;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: left;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
   width: 100%;
 
   @media ${device.mobile} {
-    padding: 20px 0;
+    align-items: center; 
   }
 `;
 
 const BeyondImage = styled.img`
   width: 100%;
-  max-width: 250px;
   height: auto;
-  margin-bottom: 15px;
 `;
 
 const BeyondContent = styled.div`
-  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 15px;
-  gap: 10px;
+  gap: 8px;
+  text-align: left;
+
+  @media ${device.mobile} {
+    align-items: flex-start; 
+    text-align: left;
+  }
+`;
+
+const DateTag = styled.div`
+  display: inline-block;
+  padding: 2px 6px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 `;
 
 const BeyondTitle = styled.h3`
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: black;
 `;
 
 const BeyondDescription = styled.p`
-  max-width: 600px;
-  font-size: 1.2rem;
-  color: #555;
-  text-align: left;
+  font-size: 18px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+  color: black;
 `;
 
 const BeyondLink = styled.a`
@@ -55,14 +66,15 @@ const BeyondLink = styled.a`
   }
 `;
 
-const BeyondCard = ({ title, description, image, link, buttonType = "portfolio" }) => {
+
+const BeyondCard = ({ title, description, image, link, buttonType = "portfolio", source }) => {
   return (
     <BeyondCardWrapper>
       <BeyondImage src={image} alt={title} />
       <BeyondContent>
+        {source && <DateTag>{source}</DateTag>}
         <BeyondTitle>{title}</BeyondTitle>
         <BeyondDescription>{description}</BeyondDescription>
-
         {link && (
           <BeyondLink href={link} target="_blank" rel="noopener noreferrer">
             <img
@@ -71,6 +83,7 @@ const BeyondCard = ({ title, description, image, link, buttonType = "portfolio" 
             />
           </BeyondLink>
         )}
+
       </BeyondContent>
     </BeyondCardWrapper>
   );

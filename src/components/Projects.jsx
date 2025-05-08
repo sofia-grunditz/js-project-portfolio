@@ -3,11 +3,13 @@ import { device } from './theme';
 
 const ProjectsSection = styled.section`
   width: 100%;
-  padding: 128px 0;
   background: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-bottom: 128px;
+
+
 
   @media ${device.tablet} {
     padding: 96px 16px;
@@ -56,33 +58,34 @@ const Title = styled.h2`
   font-family: 'Montserrat';
   font-weight: 700;
   text-align: left;
-  margin-bottom: 4rem;
+  margin-top: 128px !important;
+  margin-bottom: 128px !important; 
   margin-left: auto;
   margin-right: auto;
   width: 1044px;
 
   @media ${device.desktop} {
-    font-size: 56px;
-    margin-bottom: 3rem;
+    font-size: 80px;
+    margin-bottom: 96px;
     width: 958px;
   }
 
   @media ${device.tablet} {
     font-size: 40px;
-    margin-bottom: 2rem;
-    width: 680px;
-    padding-left: 32px;
+  margin: 0 auto 64px auto;
+  width: 100%;
+  text-align: center;
+  padding: 0;
   }
 
   @media ${device.mobile} {
     font-size: 32px;
     width: 343px;
-    margin: 64px auto 24px auto;
+    margin: 64px auto 32px auto;
     text-align: center;
     padding: 0;
   }
 `;
-
 const ProjectCard = styled.div`
   display: flex;
   flex-direction: row;
@@ -219,6 +222,11 @@ const ButtonContainer = styled.div`
   @media ${device.desktop} {
     gap: 28px;
   }
+  @media ${device.tablet} {
+  gap: 24px;
+  justify-content: center;
+}
+
 
   @media ${device.mobile} {
     gap: 24px;
@@ -297,6 +305,7 @@ const Projects = () => {
   return (
     <ProjectsSection>
       <Title>Featured Projects</Title>
+
       <ProjectsContainer>
         {projectData.map((project, index) => (
           <ProjectCard key={index}>

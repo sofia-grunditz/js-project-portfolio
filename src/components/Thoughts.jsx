@@ -16,29 +16,26 @@ const ThoughtsSection = styled.section`
   }
 `;
 
-
 const Title = styled.h2`
   color: #D5003C;
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  word-wrap: break-word;
   margin-bottom: 128px;
-  padding-left: 234px;
-  max-width: 1044px;
   text-align: left;
 
   @media ${device.tablet} {
     font-size: 60px;
-    padding-left: 32px;
+    margin-left: 0;
   }
 
   @media ${device.mobile} {
     font-size: 40px;
-    padding-left: 16px;
-    margin-bottom: 80px;
+    margin: 0 auto 80px;
+    text-align: center;
   }
 `;
+
 
 
 const ThoughtsContainer = styled.div`
@@ -47,15 +44,15 @@ const ThoughtsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 64px;
-  
+
+  @media ${device.tablet} {
+    width: 95%;
+    gap: 48px;
+  }
+
   @media ${device.mobile} {
     width: 100%;
-    gap: 24px; 
-  }
-  
-  @media ${device.tablet} {
-    width: 95%; 
-    gap: 48px; 
+    gap: 24px;
   }
 `;
 
@@ -65,23 +62,6 @@ const ThoughtCard = styled.div`
   gap: 32px;
   align-items: flex-start;
   width: 100%;
-  
-  @media ${device.mobile} {
-    width: 100%; 
-  }
-`;
-
-const ThoughtImage = styled.img`
-  width: 100%;
-  height: auto;
-  background-color: #D9D9D9;
-  display: block;
-  margin-bottom: 40px;
-  padding-left: 0;
-
-  @media ${device.desktop} {
-    padding-left: 234px;
-  }
 
   @media ${device.tablet} {
     padding-left: 32px;
@@ -92,18 +72,24 @@ const ThoughtImage = styled.img`
   }
 `;
 
+const ThoughtImage = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
+`;
 
 const ThoughtContent = styled.div`
-  width: 100%; 
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  box-sizing: border-box; 
-  
+  box-sizing: border-box;
+
   @media ${device.mobile} {
-    width: 100%; 
+    width: 100%;
   }
 `;
+
 const DateTag = styled.div`
   display: inline-block;
   padding: 2px 6px;
@@ -114,9 +100,9 @@ const DateTag = styled.div`
   font-weight: 600;
   align-self: flex-start;
   white-space: nowrap;
-  
+
   @media ${device.mobile} {
-    font-size: 14px; 
+    font-size: 14px;
   }
 `;
 
@@ -125,16 +111,15 @@ const ThoughtTitle = styled.h3`
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: black;
-  width: 100%; 
+  width: 100%;
   box-sizing: border-box;
-  
-  @media ${device.mobile} {
-    font-size: 20px;
-    width: 100%;
-  }
-  
+
   @media ${device.tablet} {
     font-size: 28px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 20px;
   }
 `;
 
@@ -144,26 +129,26 @@ const ThoughtText = styled.p`
   font-weight: 400;
   color: black;
   line-height: 1.6;
-  max-width: 100%; 
+  max-width: 100%;
   text-align: left;
   box-sizing: border-box;
 
-  @media ${device.mobile} {
-    font-size: 16px;
-    padding: 0 15px; 
-  }
-  
   @media ${device.tablet} {
     font-size: 18px;
-    padding: 0 20px; 
+    padding: 0 20px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 16px;
+    padding: 0 15px;
   }
 `;
 
 const Thoughts = () => {
   return (
     <ThoughtsSection>
-      <Title>My thoughts</Title>
       <ThoughtsContainer>
+        <Title>My thoughts</Title>
         <ThoughtCard>
           <ThoughtImage src="/images/imagethoughts.png" alt="Glass" />
           <ThoughtContent>
@@ -171,9 +156,9 @@ const Thoughts = () => {
             <ThoughtTitle>BUILDING WORLDS WITH WORDS</ThoughtTitle>
             <ThoughtText>
               In my current role as a technical writer, I create configuration guides, system administration documentation, and technical tutorials that help users understand and navigate complex systems. I enjoy digging into technical details and turning them into content that’s clear, structured, and actually helpful—whether it's for IT pros or curious beginners.
-
+              <br /><br />
               Beyond my day job, I’m also a writer in the more traditional sense. In 2016, I received a literary award for my fiction. Writing has been central to how I process the world and I’ve always loved building worlds with words—whether I’m writing a short story, or explaining how a server works - or now, coding websites into existence.
-
+              <br /><br />
               My journey into web development grew out of a desire to combine content and interaction—to not just write about systems or software, but understand and build them. I’m currently expanding my skills in front-end development, learning how to create accessible, responsive interfaces and exploring how design and documentation can work together. Writing and web development may seem like different disciplines, but to me, they’re both about the same thing: structure, clarity, and storytelling.
             </ThoughtText>
           </ThoughtContent>

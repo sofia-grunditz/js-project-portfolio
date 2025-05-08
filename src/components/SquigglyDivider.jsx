@@ -2,35 +2,30 @@ import styled from "styled-components";
 import { device } from './theme.js';
 
 const SquigglyContainer = styled.div`
-  background-color: #fce4ec;
   width: 100%;
+  background-color: #FFECEA;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
   padding: 0;
   margin: 0;
-
- /* Centrera den korrekt */
-
-  @media ${device.tablet} {
-    max-width: 1000px; /* Lite mindre på tablet */
-  }
-
-  @media ${device.mobile} {
-    max-width: 90%; /* Gör den bredare på mobil */
-  }
 `;
 
 const SquigglyLine = styled.img`
   width: 100%;
   height: auto;
-  display: block; 
-  object-fit: cover;
+  display: block;
+
+  @media ${device.desktop} {
+    max-width: 100%;
+  }
 
   @media ${device.tablet} {
-    max-width: 1000px;
+    max-width: 100%;
   }
 
   @media ${device.mobile} {
-    max-width: 90%;
+    max-width: 100%;
   }
 `;
 
@@ -40,4 +35,4 @@ const SquigglyDivider = () => (
   </SquigglyContainer>
 );
 
-export default SquigglyDivider; 
+export default SquigglyDivider;
