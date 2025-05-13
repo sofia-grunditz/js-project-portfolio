@@ -10,37 +10,37 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 124px 0;
+
+  @media ${device.tablet} {
+    padding: 100px 0;
+  }
 
   @media ${device.mobile} {
-    padding-top: 80px!important; 
-    padding-bottom: 80px!important;
+    padding: 80px 0;
   }
 `;
 
-const Title = styled.div`
-  width: 1044px;
-  max-width: 90%;
-  text-align: center;
+const Title = styled.h2`
+  width: 100%;
+  max-width: 1044px;
   color: white;
   font-size: 80px;
   font-family: 'Montserrat';
   font-weight: 700;
-  word-wrap: break-word;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 128px;
+  text-align: center;
+  margin: 0 auto 128px;
 
   @media ${device.tablet} {
     font-size: 56px;
-    width: 90%;
     margin-bottom: 96px;
+    padding: 0 24px;
   }
 
   @media ${device.mobile} {
     font-size: 40px;
-    width: 90%;
     margin-bottom: 64px;
-    margin-top: 64px;
+    padding: 0 20px;
   }
 `;
 
@@ -71,10 +71,13 @@ const SkillContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: fit-content;
 
   @media ${device.mobile} {
     align-items: center;
+    text-align: center;
   }
 `;
 
@@ -112,7 +115,7 @@ const SkillList = styled.ul`
   }
 `;
 
-export default function Skills() {
+const Skills = () => {
   return (
     <Container>
       <Title>Skills</Title>
@@ -171,4 +174,6 @@ export default function Skills() {
       </SkillSections>
     </Container>
   );
-}
+};
+
+export default Skills;

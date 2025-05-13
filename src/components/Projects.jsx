@@ -6,49 +6,38 @@ const ProjectsSection = styled.section`
   background: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-bottom: 128px;
-
-
+  align-items: center;
+  padding: 128px 0;
 
   @media ${device.tablet} {
-    padding: 96px 16px;
+    padding: 128px 32px;
   }
 
   @media ${device.mobile} {
     padding: 64px 12px;
-    align-items: center;
   }
 `;
 
 const ProjectsContainer = styled.div`
-  width: 1044px;
-  margin-left: 234px;
+  width: 100%;
+  max-width: 1044px;
   display: flex;
   flex-direction: column;
   gap: 128px;
 
   @media ${device.desktop} {
-    width: 958px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 958px;
     gap: 96px;
   }
 
   @media ${device.tablet} {
-    width: 680px;
-    margin: 0 auto;
-    padding-left: 32px;
+    max-width: 744px;
     gap: 64px;
   }
 
   @media ${device.mobile} {
-    width: 100%;
     max-width: 343px;
-    margin: 0 auto;
-    padding: 0 16px;
     gap: 32px;
-    align-items: center;
   }
 `;
 
@@ -58,34 +47,26 @@ const Title = styled.h2`
   font-family: 'Montserrat';
   font-weight: 700;
   text-align: left;
-  margin-top: 128px !important;
-  margin-bottom: 128px !important; 
-  margin-left: auto;
-  margin-right: auto;
-  width: 1044px;
+  margin-bottom: 128px;
 
   @media ${device.desktop} {
     font-size: 80px;
     margin-bottom: 96px;
-    width: 958px;
   }
 
   @media ${device.tablet} {
     font-size: 60px;
-  margin: 0 auto 64px auto;
-  width: 100%;
-  text-align: center;
-  padding: 0;
+    margin-bottom: 64px;
+    text-align: left;
   }
 
   @media ${device.mobile} {
     font-size: 40px;
-    width: 343px;
-    margin: 64px auto 32px auto;
+    margin-bottom: 32px;
     text-align: center;
-    padding: 0;
   }
 `;
+
 const ProjectCard = styled.div`
   display: flex;
   flex-direction: row;
@@ -101,11 +82,13 @@ const ProjectCard = styled.div`
 
   @media ${device.tablet} {
     flex-direction: column;
+    align-items: flex-start;
     gap: 24px;
   }
 
   @media ${device.mobile} {
     flex-direction: column;
+    align-items: center;
     gap: 16px;
   }
 `;
@@ -119,7 +102,7 @@ const ProjectImage = styled.img`
   }
 
   @media ${device.tablet} {
-    width: 340px;
+    width: 100%;
   }
 
   @media ${device.mobile} {
@@ -135,7 +118,12 @@ const ProjectContent = styled.div`
   align-items: flex-start;
   gap: 16px;
 
-  @media ${device.tablet}, ${device.mobile} {
+  @media ${device.tablet} {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  @media ${device.mobile} {
     align-items: center;
     text-align: center;
   }
@@ -174,8 +162,8 @@ const ProjectDescription = styled.p`
 
   @media ${device.tablet} {
     font-size: 16px;
-    max-width: 680px;
-    padding: 0 16px;
+    max-width: 744px;
+    padding: 0;
   }
 
   @media ${device.mobile} {
@@ -191,7 +179,11 @@ const TechStack = styled.div`
   gap: 4px;
   justify-content: flex-start;
 
-  @media ${device.tablet}, ${device.mobile} {
+  @media ${device.tablet} {
+    justify-content: flex-start;
+  }
+
+  @media ${device.mobile} {
     justify-content: center;
   }
 `;
@@ -222,11 +214,11 @@ const ButtonContainer = styled.div`
   @media ${device.desktop} {
     gap: 28px;
   }
-  @media ${device.tablet} {
-  gap: 24px;
-  justify-content: center;
-}
 
+  @media ${device.tablet} {
+    gap: 24px;
+    justify-content: flex-start;
+  }
 
   @media ${device.mobile} {
     gap: 24px;
@@ -304,9 +296,8 @@ const projectData = [
 const Projects = () => {
   return (
     <ProjectsSection>
-      <Title>Featured Projects</Title>
-
       <ProjectsContainer>
+        <Title>Featured Projects</Title>
         {projectData.map((project, index) => (
           <ProjectCard key={index}>
             <ProjectImage src={project.image} alt={project.title} />

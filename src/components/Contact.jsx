@@ -3,7 +3,7 @@ import { device } from './theme';
 
 const ContactSection = styled.section`
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   position: relative;
   background: white;
   overflow: hidden;
@@ -12,6 +12,10 @@ const ContactSection = styled.section`
   align-items: center;
   justify-content: center;
   padding: 2rem;
+
+  @media ${device.mobile} {
+    padding: 2rem 1.5rem 4rem;
+  }
 `;
 
 const Title = styled.h2`
@@ -38,6 +42,7 @@ const Title = styled.h2`
     font-size: 48px;
   }
 `;
+
 const ContactWrapper = styled.div`
   width: 100%;
   max-width: 1044px;
@@ -66,11 +71,6 @@ const ProfileImage = styled.img`
   width: 164px;
   height: 164px;
   border-radius: 50%;
-
-  @media ${device.mobile} {
-    width: 164px;
-    height: 164px;
-  }
 `;
 
 const InfoContainer = styled.div`
@@ -86,13 +86,10 @@ const InfoText = styled.p`
   font-family: 'Montserrat';
   font-weight: 600;
   text-align: center;
-  word-break: break-word;
-overflow-wrap: break-word;
+  overflow-wrap: break-word;
 
   @media ${device.mobile} {
     font-size: 18px;
-    word-break: break-word;
-overflow-wrap: break-word;
   }
 `;
 
@@ -133,24 +130,33 @@ const SocialIconLink = styled.a`
   }
 `;
 
-
 const Contact = () => {
   return (
     <ContactSection>
       <Title>Let’s talk</Title>
       <ContactWrapper>
-        <ProfileImage src="https://media.licdn.com/dms/image/v2/D4D03AQHWEWzpKrj68g/profile-displayphoto-shrink_800_800/B4DZUJMZ5OHIAc-/0/1739616002532?e=1750896000&v=beta&t=ZmnSJeBUPKitAPWwg3EgGzGHpFT0VS8EEUXQ_UAUGXs"
-          alt="Sofia Grunditz" />
+        <ProfileImage
+          src="https://media.licdn.com/dms/image/v2/D4D03AQHWEWzpKrj68g/profile-displayphoto-shrink_800_800/B4DZUJMZ5OHIAc-/0/1739616002532?e=1750896000&v=beta&t=ZmnSJeBUPKitAPWwg3EgGzGHpFT0VS8EEUXQ_UAUGXs"
+          alt="Sofia Grunditz"
+        />
         <InfoContainer>
           <InfoText>Sofia Grunditz</InfoText>
           <InfoText>+46(0)763 12 33 45</InfoText>
           <InfoText>tora.s.grunditz@gmail.com</InfoText>
         </InfoContainer>
         <SocialIconsWrapper>
-          <SocialIconLink href="https://www.linkedin.com/in/sofia-grunditz-608648163/" target="_blank" rel="noopener noreferrer">
+          <SocialIconLink
+            href="https://www.linkedin.com/in/sofia-grunditz-608648163/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/linkedin.svg" alt="LinkedIn icon" />
           </SocialIconLink>
-          <SocialIconLink href="https://github.com/sofia-grunditz" target="_blank" rel="noopener noreferrer">
+          <SocialIconLink
+            href="https://github.com/sofia-grunditz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/github.svg" alt="GitHub icon" />
           </SocialIconLink>
         </SocialIconsWrapper>

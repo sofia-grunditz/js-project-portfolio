@@ -21,18 +21,18 @@ const Title = styled.h2`
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  margin-bottom: 128px;
   text-align: left;
+  margin-bottom: 128px;
 
   @media ${device.tablet} {
     font-size: 60px;
-    margin-left: 0;
+    margin-bottom: 96px;
   }
 
   @media ${device.mobile} {
     font-size: 40px;
-    margin: 0 auto 80px;
     text-align: center;
+    margin-bottom: 80px;
   }
 `;
 
@@ -84,10 +84,6 @@ const ThoughtContent = styled.div`
   flex-direction: column;
   gap: 4px;
   box-sizing: border-box;
-
-  @media ${device.mobile} {
-    width: 100%;
-  }
 `;
 
 const DateTag = styled.div`
@@ -149,6 +145,7 @@ const Thoughts = () => {
     <ThoughtsSection>
       <ThoughtsContainer>
         <Title>My thoughts</Title>
+
         <ThoughtCard>
           <ThoughtImage src="/images/imagethoughts.png" alt="Glass" />
           <ThoughtContent>

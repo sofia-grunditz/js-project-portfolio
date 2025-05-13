@@ -3,17 +3,23 @@ import { device } from './theme';
 
 const TechContainer = styled.section`
   width: 100%;
-  padding: 160px 0;
+  height: 980px;
   background: #0B24F5;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0 234px;
 
   @media ${device.tablet} {
-    padding: 120px 0;
+    height: auto;
+    padding: 120px 32px;
+    flex-direction: column;
   }
 
   @media ${device.mobile} {
+    height: auto;
     padding: 80px 16px;
+    flex-direction: column;
   }
 `;
 
@@ -36,7 +42,7 @@ const TechContent = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 32px;
+    gap: 48px;
     max-width: 343px;
   }
 `;
@@ -74,7 +80,7 @@ const TechSkills = styled.p`
   }
 `;
 
-export default function Tech() {
+const Tech = () => {
   return (
     <TechContainer>
       <TechContent>
@@ -85,4 +91,6 @@ export default function Tech() {
       </TechContent>
     </TechContainer>
   );
-}
+};
+
+export default Tech;

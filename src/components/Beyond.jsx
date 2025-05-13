@@ -16,12 +16,22 @@ const BeyondContainer = styled.section`
     padding: 60px 0 40px;
   }
 `;
+
 const BeyondWrapper = styled.div`
   max-width: 1044px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 0 20px;
+
+  @media ${device.tablet} {
+    padding: 0 32px;
+  }
+
+  @media ${device.mobile} {
+    padding: 0 16px;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -29,18 +39,21 @@ const SectionTitle = styled.h2`
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  margin-bottom: 124px;
   text-align: left;
+  margin-bottom: 124px;
+  padding-left: 0;
 
   @media ${device.tablet} {
     font-size: 60px;
-    margin-left: 32px;
+    margin-bottom: 96px;
+    text-align: left;
+    margin-left: 0;
   }
 
   @media ${device.mobile} {
     font-size: 40px;
-    margin: 0 auto 80px auto;
     text-align: center;
+    margin: 0 auto 80px;
   }
 `;
 
@@ -52,14 +65,13 @@ const BeyondGrid = styled.div`
 
   @media ${device.tablet} {
     grid-template-columns: 1fr;
-    padding: 0 32px;
   }
 
   @media ${device.mobile} {
     grid-template-columns: 1fr;
-    padding: 0 16px;
   }
 `;
+
 const Beyond = () => {
   return (
     <BeyondContainer>

@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { device } from './theme';
 
+const PROFILE_IMAGE_URL =
+  'https://media.licdn.com/dms/image/v2/D4D03AQHWEWzpKrj68g/profile-displayphoto-shrink_800_800/B4DZUJMZ5OHIAc-/0/1739616002532?e=1750896000&v=beta&t=ZmnSJeBUPKitAPWwg3EgGzGHpFT0VS8EEUXQ_UAUGXs';
+
 const HeaderContainer = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -13,7 +16,7 @@ const HeaderContainer = styled.div`
   }
 
   @media ${device.tablet} {
-    padding-top: 180px;
+    padding-top: 120px;
   }
 
   @media ${device.mobile} {
@@ -92,25 +95,27 @@ const TitleContainer = styled.div`
   }
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: black;
+  margin: 0;
 `;
 
-const Subtitle = styled.div`
+const Subtitle = styled.h2`
   font-size: 80px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #0B24F5;
+  color: #091ecb;
+  margin: 0;
 
   @media ${device.desktop} {
     font-size: 56px;
   }
 
   @media ${device.tablet} {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   @media ${device.mobile} {
@@ -118,12 +123,13 @@ const Subtitle = styled.div`
   }
 `;
 
-const BioText = styled.div`
+const BioText = styled.p`
   font-size: 18px;
   font-family: 'Hind', sans-serif;
   font-weight: 400;
   color: black;
   text-align: left;
+  margin: 0;
 
   @media ${device.mobile} {
     text-align: center;
@@ -151,15 +157,12 @@ const Arrow = styled.img`
   height: 45px;
 `;
 
-export default function Header() {
+const Header = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
         <ProfileSection>
-          <ProfileImage
-            src="https://media.licdn.com/dms/image/v2/D4D03AQHWEWzpKrj68g/profile-displayphoto-shrink_800_800/B4DZUJMZ5OHIAc-/0/1739616002532?e=1750896000&v=beta&t=ZmnSJeBUPKitAPWwg3EgGzGHpFT0VS8EEUXQ_UAUGXs"
-            alt="Sofia Grunditz"
-          />
+          <ProfileImage src={PROFILE_IMAGE_URL} alt="Sofia Grunditz" />
 
           <TextBlock>
             <TitleContainer>
@@ -184,4 +187,6 @@ export default function Header() {
       </HeaderContent>
     </HeaderContainer>
   );
-}
+};
+
+export default Header;
