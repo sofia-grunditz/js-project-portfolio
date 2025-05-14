@@ -8,7 +8,7 @@ const scroll = keyframes`
 const TickerContainer = styled.div`
   width: 100%;
   height: 114px;
-  background: #FF4575;
+background: #C4003A;
   overflow: hidden;
   position: relative;
 `;
