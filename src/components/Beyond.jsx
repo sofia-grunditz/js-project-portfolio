@@ -1,10 +1,10 @@
 import BeyondCard from "./BeyondCard";
 import beyondData from "../data/beyondData";
 import styled from "styled-components";
-import { device } from './theme.js';
+import { device } from "./theme.js";
 
 const BeyondContainer = styled.section`
-  background-color: #FFECEA;
+  background-color: #ffecea;
   width: 100%;
   padding: 124px 0 60px;
 
@@ -35,9 +35,9 @@ const BeyondWrapper = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  color: #D5003C;
+  color: #d5003c;
   font-size: 80px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-align: left;
   margin-bottom: 124px;

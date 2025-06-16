@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { device } from './theme';
+import styled from "styled-components";
+import { device } from "./theme";
 
 const ThoughtsSection = styled.section`
-  background-color: #FFECEA;
+  background-color: #ffecea;
   width: 100%;
   text-align: left;
   padding: 124px 0 60px;
@@ -17,9 +17,9 @@ const ThoughtsSection = styled.section`
 `;
 
 const Title = styled.h2`
-  color: #D5003C;
+  color: #d5003c;
   font-size: 80px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-align: left;
   margin-bottom: 128px;
@@ -27,6 +27,7 @@ const Title = styled.h2`
   @media ${device.tablet} {
     font-size: 60px;
     margin-bottom: 96px;
+    padding-left: 32px;
   }
 
   @media ${device.mobile} {
@@ -35,8 +36,6 @@ const Title = styled.h2`
     margin-bottom: 80px;
   }
 `;
-
-
 
 const ThoughtsContainer = styled.div`
   max-width: 1044px;
@@ -92,7 +91,7 @@ const DateTag = styled.div`
   background: black;
   color: white;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   align-self: flex-start;
   white-space: nowrap;
@@ -104,7 +103,7 @@ const DateTag = styled.div`
 
 const ThoughtTitle = styled.h3`
   font-size: 32px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: black;
   width: 100%;
@@ -121,7 +120,7 @@ const ThoughtTitle = styled.h3`
 
 const ThoughtText = styled.p`
   font-size: 20px;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 400;
   color: black;
   line-height: 1.6;
@@ -131,7 +130,6 @@ const ThoughtText = styled.p`
 
   @media ${device.tablet} {
     font-size: 18px;
-    padding: 0 20px;
   }
 
   @media ${device.mobile} {
@@ -152,11 +150,30 @@ const Thoughts = () => {
             <DateTag>April 2025</DateTag>
             <ThoughtTitle>BUILDING WORLDS WITH WORDS</ThoughtTitle>
             <ThoughtText>
-              In my current role as a technical writer, I create configuration guides, system administration documentation, and technical tutorials that help users understand and navigate complex systems. I enjoy digging into technical details and turning them into content that’s clear, structured, and actually helpful—whether it's for IT pros or curious beginners.
-              <br /><br />
-              Beyond my day job, I’m also a writer in the more traditional sense. In 2016, I received a literary award for my fiction. Writing has been central to how I process the world and I’ve always loved building worlds with words—whether I’m writing a short story, or explaining how a server works - or now, coding websites into existence.
-              <br /><br />
-              My journey into web development grew out of a desire to combine content and interaction—to not just write about systems or software, but understand and build them. I’m currently expanding my skills in front-end development, learning how to create accessible, responsive interfaces and exploring how design and documentation can work together. Writing and web development may seem like different disciplines, but to me, they’re both about the same thing: structure, clarity, and storytelling.
+              In my current role as a technical writer, I create configuration
+              guides, system administration documentation, and technical
+              tutorials that help users understand and navigate complex systems.
+              I enjoy digging into technical details and turning them into
+              content that’s clear, structured, and actually helpful—whether
+              it's for IT pros or curious beginners.
+              <br />
+              <br />
+              Beyond my day job, I’m also a writer in the more traditional
+              sense. In 2016, I received a literary award for my fiction.
+              Writing has been central to how I process the world and I’ve
+              always loved building worlds with words—whether I’m writing a
+              short story, or explaining how a server works - or now, coding
+              websites into existence.
+              <br />
+              <br />
+              My journey into web development grew out of a desire to combine
+              content and interaction—to not just write about systems or
+              software, but understand and build them. I’m currently expanding
+              my skills in front-end development, learning how to create
+              accessible, responsive interfaces and exploring how design and
+              documentation can work together. Writing and web development may
+              seem like different disciplines, but to me, they’re both about the
+              same thing: structure, clarity, and storytelling.
             </ThoughtText>
           </ThoughtContent>
         </ThoughtCard>

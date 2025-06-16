@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import { device } from "./theme.js";
 
 const BeyondCardWrapper = styled.div`
@@ -9,7 +9,7 @@ const BeyondCardWrapper = styled.div`
   width: 100%;
 
   @media ${device.mobile} {
-    align-items: center; 
+    align-items: center;
   }
 `;
 
@@ -26,7 +26,7 @@ const BeyondContent = styled.div`
   text-align: left;
 
   @media ${device.mobile} {
-    align-items: flex-start; 
+    align-items: flex-start;
     text-align: left;
   }
 `;
@@ -37,20 +37,20 @@ const DateTag = styled.div`
   background: black;
   color: white;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 `;
 
 const BeyondTitle = styled.h3`
   font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: black;
 `;
 
 const BeyondDescription = styled.p`
   font-size: 18px;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 400;
   color: black;
 `;
@@ -66,8 +66,14 @@ const BeyondLink = styled.a`
   }
 `;
 
-
-const BeyondCard = ({ title, description, image, link, buttonType = "portfolio", source }) => {
+const BeyondCard = ({
+  title,
+  description,
+  image,
+  link,
+  buttonType = "portfolio",
+  source,
+}) => {
   return (
     <BeyondCardWrapper>
       <BeyondImage src={image} alt={title} />
@@ -78,12 +84,15 @@ const BeyondCard = ({ title, description, image, link, buttonType = "portfolio",
         {link && (
           <BeyondLink href={link} target="_blank" rel="noopener noreferrer">
             <img
-              src={buttonType === "article" ? "/readarticle.svg" : "/ViewPortfolio.svg"}
+              src={
+                buttonType === "article"
+                  ? "/readarticle.svg"
+                  : "/ViewPortfolio.svg"
+              }
               alt={buttonType === "article" ? "Read Article" : "View Portfolio"}
             />
           </BeyondLink>
         )}
-
       </BeyondContent>
     </BeyondCardWrapper>
   );

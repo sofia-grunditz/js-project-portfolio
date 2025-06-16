@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import { device } from './theme';
+import styled from "styled-components";
+import { device } from "./theme";
 
 const TechContainer = styled.section`
   width: 100%;
   height: 980px;
-  background: #0B24F5;
+  background: #0b24f5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +49,7 @@ const TechContent = styled.div`
 
 const TechTitle = styled.h2`
   font-size: 80px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: white;
   margin: 0;
@@ -65,7 +65,7 @@ const TechTitle = styled.h2`
 
 const TechSkills = styled.p`
   font-size: 32px;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 600;
   color: white;
   margin: 0;
@@ -86,7 +86,9 @@ const Tech = () => {
       <TechContent>
         <TechTitle>Tech</TechTitle>
         <TechSkills>
-          HTML, CSS, Flexbox, JavaScript, ES6, JSX, React, React Hooks, Node.js, Mongo DB, Web Accessibility, APIs, mob-programming, pair-programming, GitHub.
+          HTML, CSS, Flexbox, JavaScript, ES6, JSX, React, React Hooks, Node.js,
+          Mongo DB, Web Accessibility, APIs, mob-programming, pair-programming,
+          GitHub.
         </TechSkills>
       </TechContent>
     </TechContainer>

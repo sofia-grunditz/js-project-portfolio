@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { device } from './theme';
+import styled from "styled-components";
+import { device } from "./theme";
 
 const ProjectsSection = styled.section`
   width: 100%;
@@ -42,9 +42,9 @@ const ProjectsContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  color: #0B24F5;
+  color: #0b24f5;
   font-size: 80px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 700;
   text-align: left;
   margin-bottom: 128px;
@@ -131,7 +131,7 @@ const ProjectContent = styled.div`
 
 const ProjectTitle = styled.h3`
   font-size: 32px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   color: black;
 
@@ -150,7 +150,7 @@ const ProjectTitle = styled.h3`
 
 const ProjectDescription = styled.p`
   font-size: 18px;
-  font-family: 'Hind';
+  font-family: "Hind";
   font-weight: 400;
   color: black;
   max-width: 100%;
@@ -193,7 +193,7 @@ const Tech = styled.div`
   background: black;
   color: white;
   font-size: 16px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   margin: 8px 4px 0 0;
 
@@ -229,12 +229,12 @@ const ButtonContainer = styled.div`
 const ActionButton = styled.a`
   display: flex;
   align-items: center;
-  background: #F5F5F5;
+  background: #f5f5f5;
   border-radius: 40px;
   padding: 0.5rem 1rem;
   color: #333;
   font-size: 20px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 600;
   text-decoration: none;
 

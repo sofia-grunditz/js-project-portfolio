@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const scroll = keyframes`
   0% { transform: translateX(0); }
@@ -8,7 +8,7 @@ const scroll = keyframes`
 const TickerContainer = styled.div`
   width: 100%;
   height: 114px;
-background: #C4003A;
+  background: #c4003a;
   overflow: hidden;
   position: relative;
 `;
@@ -21,11 +21,11 @@ const TickerTrack = styled.div`
 
 const TickerText = styled.span`
   font-size: 26px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: white;
   padding-left: 13px;
-  line-height: 114px; // 
+  line-height: 114px; //
   display: inline-block;
 
   @media (max-width: 767px) {
@@ -33,7 +33,6 @@ const TickerText = styled.span`
     line-height: 114px;
   }
 `;
-
 
 const TickerTape = () => {
   const message =

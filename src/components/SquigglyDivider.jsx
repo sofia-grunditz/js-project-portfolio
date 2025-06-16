@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { device } from './theme.js';
+import { device } from "./theme.js";
 
 const SquigglyContainer = styled.div`
   width: 100%;
-  background-color: #FFECEA;
+  background-color: #ffecea;
   overflow: hidden;
   display: flex;
   justify-content: center;

@@ -4,11 +4,11 @@ import Header from "./components/Header";
 import Tech from "./components/Tech.jsx";
 import Projects from "./components/Projects.jsx";
 import Thoughts from "./components/Thoughts.jsx";
-import Beyond from './components/Beyond.jsx';
+import Beyond from "./components/Beyond.jsx";
 import Skills from "./components/Skills.jsx";
-import Contact from './components/Contact.jsx';
-import TickerTape from "./components/TickerTape.jsx"; // Lägg till denna rad
-import SquigglyDivider from "./components/SquigglyDivider"; // ✅ Se till att detta finns!
+import Contact from "./components/Contact.jsx";
+import TickerTape from "./components/TickerTape.jsx";
+import SquigglyDivider from "./components/SquigglyDivider";
 
 function App() {
   return (
@@ -17,10 +17,9 @@ function App() {
         <Header />
         <Tech />
         <Projects />
-        <SquigglyDivider /> {/* ✅ Rätt komponent */}
+        <SquigglyDivider />
         <Thoughts />
-
-        <SquigglyDivider /> {/* ✅ Rätt komponent */}
+        <SquigglyDivider />
         <Beyond />
         <Skills />
         <Contact />
@@ -31,4 +30,3 @@ function App() {
 }
 
 export default App;
-

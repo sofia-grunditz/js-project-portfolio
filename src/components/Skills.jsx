@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { device } from './theme.js';
+import styled from "styled-components";
+import { device } from "./theme.js";
 
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   position: relative;
-  background: #0B24F5;
+  background: #0b24f5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ const Title = styled.h2`
   max-width: 1044px;
   color: white;
   font-size: 80px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 700;
   text-align: center;
   margin: 0 auto 128px;
@@ -81,16 +81,15 @@ const SkillContainer = styled.div`
   }
 `;
 
-
 const SkillHeader = styled.div`
   padding: 8px 12px;
-  background: ${(props) => props.$bgColor || 'transparent'};
+  background: ${(props) => props.$bgColor || "transparent"};
   border-radius: 4px;
   margin-bottom: 12px;
 `;
 
 const SkillTitle = styled.h3`
-  color: ${(props) => props.$textColor || 'white'};
+  color: ${(props) => props.$textColor || "white"};
   font-size: 20px;
   font-weight: 700;
   margin: 0;
@@ -102,7 +101,7 @@ const SkillList = styled.ul`
   margin: 0;
   color: white;
   font-size: 16px;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-weight: 400;
   text-align: left;
 
